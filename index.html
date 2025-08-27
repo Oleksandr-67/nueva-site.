@@ -4,16 +4,92 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NUEVA — офіційний лендинг Олександра</title>
-  <style>body{font-family:sans-serif;background:#f8fafc;margin:2rem;color:#0f172a}</style>
+  <meta name="description" content="Nueva Beauty, Body, Nitro, Snow Collagen — кому це потрібно, як працює, як замовити і доставити в Україну." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html{scroll-behavior:smooth}
+    .card{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04)}
+    .price b{font-size:1.1rem}
+  </style>
 </head>
-<body>
-  <h1>Продукти NUEVA</h1>
-  <p>Оригінальні фото упаковок:</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
-    <div><h3>Nueva Beauty</h3><img src="assets/beauty.jpg" style="width:100%;border-radius:12px;"></div>
-    <div><h3>Nueva Nitro</h3><img src="assets/nitro_sticks.jpg" style="width:100%;border-radius:12px;"></div>
-    <div><h3>Snow Collagen</h3><img src="assets/snow_collagen.jpg" style="width:100%;border-radius:12px;"></div>
-    <div><h3>Nueva Body</h3><img src="assets/body.jpg" style="width:100%;border-radius:12px;"></div>
-  </div>
+<body class="bg-slate-900 text-slate-100 antialiased">
+  <header class="sticky top-0 bg-slate-800/70 border-b border-slate-700">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <h1 class="font-bold">NUEVA</h1>
+      <nav class="flex gap-4 text-sm">
+        <a href="#products">Продукти</a>
+        <a href="#how">Як це працює</a>
+        <a href="#shipping">Доставка</a>
+        <a href="#contact">Контакт</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h2 class="text-3xl font-extrabold">Більше енергії, фокус і відновлення</h2>
+      <p class="mt-4 text-slate-300">Мінімалістичні формули Nueva: пептиди для клітинної підтримки, Nitro для кровообігу, Snow Collagen для шкіри.</p>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <img src="./beauty.jpg" alt="Nueva Beauty" class="rounded-xl">
+      <img src="./body.jpg" alt="Nueva Body" class="rounded-xl">
+      <img src="./nitro_sticks.jpg" alt="Nueva Nitro" class="rounded-xl">
+      <img src="./snow_collagen.jpg" alt="Snow Collagen" class="rounded-xl">
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="max-w-7xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold mb-6">Продукти і ціни</h2>
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="card p-4 rounded-xl">
+        <img src="./beauty.jpg" alt="Nueva Beauty" class="rounded-lg mb-2">
+        <h3 class="font-semibold">Nueva Beauty</h3>
+        <p class="text-sm text-slate-300">Пептиди для шкіри, волосся і нігтів.</p>
+        <div class="price mt-2">$233</div>
+      </div>
+      <div class="card p-4 rounded-xl">
+        <img src="./body.jpg" alt="Nueva Body" class="rounded-lg mb-2">
+        <h3 class="font-semibold">Nueva Body</h3>
+        <p class="text-sm text-slate-300">Клітинний ресет (5-amino-1MQ + SLU-PP-332).</p>
+        <div class="price mt-2">$213</div>
+      </div>
+      <div class="card p-4 rounded-xl">
+        <img src="./nitro_sticks.jpg" alt="Nueva Nitro" class="rounded-lg mb-2">
+        <h3 class="font-semibold">Nueva Nitro</h3>
+        <p class="text-sm text-slate-300">Оксид азоту для кровотоку і енергії.</p>
+        <div class="price mt-2">$56</div>
+      </div>
+      <div class="card p-4 rounded-xl">
+        <img src="./snow_collagen.jpg" alt="Snow Collagen" class="rounded-lg mb-2">
+        <h3 class="font-semibold">Snow Collagen</h3>
+        <p class="text-sm text-slate-300">Чистий водорозчинний колаген.</p>
+        <div class="price mt-2">$102</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="max-w-7xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold mb-4">Як це працює</h2>
+    <p class="text-slate-300">Пептиди подають сигнал клітинам для відновлення. Nitro підвищує рівень оксиду азоту, покращуючи кровотік і енергію.</p>
+  </section>
+
+  <!-- Shipping -->
+  <section id="shipping" class="max-w-7xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold mb-4">Доставка в Україну</h2>
+    <p class="text-slate-300">Замовлення оформлюється через сайт виробника. Доставка здійснюється поштовими сервісами (Meest, Нова Пошта Global, USPS→Укрпошта). Я допомагаю з оформленням і супроводом.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-7xl mx-auto px-4 py-12 text-center">
+    <h2 class="text-2xl font-bold mb-4">Контакти</h2>
+    <p class="text-slate-300">Телеграм: <a href="https://t.me/+ir3g8RhuXdRmYzAy" class="underline">Nueva | Старт можливостей 🌀</a></p>
+    <p class="text-slate-300">Телефон: <a href="tel:+380503709687" class="underline">+380503709687</a></p>
+  </section>
+
+  <footer class="py-6 text-center text-slate-500 text-sm">© 2025 Nueva • Партнер: Олександр</footer>
 </body>
 </html>
+
