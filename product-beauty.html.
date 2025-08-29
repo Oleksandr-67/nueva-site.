@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="uk"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nueva Beauty — інструкція прийому</title>
+<title>Nueva Beauty — інструкція та прийом</title>
 <style>
 body{margin:0;background:#0f1b2a;color:#eaf3ff;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial}
 .wrap{max-width:860px;margin:0 auto;padding:20px}
@@ -10,27 +10,51 @@ img{max-width:100%;border-radius:12px;border:1px solid #ffffff22}
 h1,h2{margin:.4em 0}
 .note{color:#a6c2e2;font-size:13px}
 .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;background:#2ea8ff;color:#021420;font-weight:700}
+.hr{height:1px;background:#ffffff22;margin:14px 0}
 </style></head><body>
 <div class="wrap">
   <p><a href="index.html">← На головну</a></p>
   <h1>Nueva Beauty — інструкція прийому</h1>
+
   <div class="card">
-    <img src="beauty.jpg" alt="Nueva Beauty">
-    <p><strong>Призначення:</strong> підтримка шкіри, волосся і нігтів; клітинна регенерація.</p>
+    <img src="beauty.jpg" alt="Nueva Beauty" style="margin-bottom:12px">
+
+    <!-- START USER TEXT: Призначення -->
+    <h2>Призначення</h2>
+    <p>🔸 <strong>Встав свій текст</strong> (шкіра, волосся, нігті, клітинне відновлення тощо).</p>
+    <!-- END USER TEXT -->
+
+    <div class="hr"></div>
+
+    <!-- START USER TEXT: Як приймати -->
     <h2>Як приймати</h2>
     <ul>
-      <li>Дорослим: <strong>1 капсула 1–2 рази на день</strong> під час або після їжі, запиваючи водою.</li>
-      <li>Курс: <strong>8–12 тижнів</strong>, за потреби — перерва 2–4 тижні і повтор.</li>
-      <li>Сумісність: можна поєднувати зі <em>Snow Collagen</em> та <em>Nitro</em>.</li>
+      <li><strong>Встав свій текст</strong> — доза/час доби/з їжею чи ні.</li>
+      <li><strong>Встав свій текст</strong> — тривалість курсу і перерви.</li>
     </ul>
-    <h2>Кому підходить</h2>
+    <!-- END USER TEXT -->
+
+    <div class="hr"></div>
+
+    <!-- START USER TEXT: Поради -->
+    <h2>Поради</h2>
     <ul>
-      <li>Жінкам 25–80 для тонусу шкіри, волосся, нігтів.</li>
-      <li>Періоди стресу/нестачі сну — для підтримки відновлення.</li>
+      <li><strong>Встав свій текст</strong> — поєднання з Body/Nitro/Collagen.</li>
     </ul>
+    <!-- END USER TEXT -->
+
+    <div class="hr"></div>
+
+    <!-- START USER TEXT: Застереження -->
     <h2>Застереження</h2>
-    <p class="note">Не є ліками. Індивідуальна непереносимість — припиніть прийом. За наявності хронічних станів або вагітності — проконсультуйтеся з лікарем.</p>
-    <p><a class="btn" href="index.html#prices">Ціна та замовлення</a></p>
+    <ul>
+      <li><strong>Встав свій текст</strong> — індивідуальна чутливість, вагітність/лактація тощо.</li>
+    </ul>
+    <!-- END USER TEXT -->
+
+    <p class="note">Інформація має ознайомчий характер і не є медичною порадою.</p>
+    <p><a class="btn" href="index.html#prices">Ціни та замовлення</a></p>
   </div>
 </div>
 </body></html>
+
