@@ -1,278 +1,241 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NUEVA — пептиди, колаген і Nitro для енергії та відновлення</title>
-  <meta name="description" content="Пептиди NUEVA: клітинна підтримка, енергія, фокус і відновлення. Простими словами про пептиди й мітохондрії, історія та наука, ціни, доставка в Україну." />
-
+  <title>NUEVA — пептиди, енергія та відновлення</title>
+  <meta name="description" content="Пептиди NUEVA: більше енергії, фокусу і відновлення. Як це працює, для кого, наукова історія, продукти та доставка в Україну." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="preload" as="style" onload="this.rel='stylesheet'">
   <style>
     :root{
-      --bg:#0f172a;        /* темний фон */
-      --card:#111827;      /* картки */
-      --muted:#94a3b8;     /* приглушений текст */
-      --text:#e5e7eb;      /* основний текст */
-      --accent:#22d3ee;    /* бірюзовий */
-      --brand:#38bdf8;     /* світліший бірюзовий */
-      --ok:#34d399;        /* зелений */
-      --warn:#f59e0b;      /* жовтий */
+      --bg:#0f1b2a; --panel:#162338; --muted:#8aa0b6;
+      --text:#f7fafc; --accent:#4cc9f0; --accent2:#a1ffce;
+      --ok:#22c55e; --warn:#f59e0b;
+      --shadow:0 10px 30px rgba(0,0,0,.25);
+      --radius:16px;
+      --max:1100px
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b1224 0%, #0f172a 100%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.5}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    header.nav{position:sticky;top:0;z-index:10;background:rgba(15,23,42,.85);backdrop-filter:blur(8px);border-bottom:1px solid #1f2937}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between}
-    .logo{font-weight:800;letter-spacing:.04em}
-    nav a{margin:0 10px;font-weight:600}
-    .btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:700}
-    .btn-primary{background:linear-gradient(90deg,var(--accent),#60a5fa);color:#0b1224}
-    .btn-outline{border:1px solid var(--accent);color:var(--text)}
-    .grid{display:grid;gap:18px}
-    .hero{padding:36px 0 14px;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
-    .h1{font-size:clamp(28px,4vw,42px);line-height:1.15;margin:0 0 10px}
-    .lead{color:var(--muted);max-width:60ch}
-    .tile4{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:16px}
-    .tile4 img{width:100%;height:100%;object-fit:cover;border-radius:16px;border:1px solid #1f2937;box-shadow:0 6px 20px rgba(0,0,0,.25)}
-    .section{padding:28px 0}
-    .section h2{font-size:clamp(22px,3.2vw,32px);margin:0 0 8px}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+    a{color:var(--accent);text-decoration:none}
+    header{position:sticky;top:0;background:rgba(15,27,42,.75);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid #1f314a;z-index:9}
+    .nav{max-width:var(--max);margin:auto;display:flex;align-items:center;gap:20px;padding:14px 18px}
+    .nav h1{font-size:18px;margin:0;letter-spacing:.12em}
+    .nav a{color:#cfe7ff}
+    .nav .sp{flex:1}
+    .nav .menu{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-block;background:var(--accent);color:#042033;padding:12px 18px;border-radius:999px;font-weight:800}
+    .btn.ghost{background:#24344e;color:#e8f1ff;border:1px solid #2b4161}
+    .chip{display:inline-block;padding:8px 12px;border-radius:999px;background:#1a2a42;color:#cfe7ff;border:1px solid #2b4161;font-size:13px}
+    .wrap{max-width:var(--max);margin:auto;padding:28px 18px}
+    .grid{display:grid;gap:22px}
+    .hero{grid-template-columns:1.1fr .9fr;align-items:center}
+    .k{background:var(--panel);border:1px solid #223553;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .pad{padding:24px}
+    .lead{font-size:42px;line-height:1.15;margin:0 0 10px;font-weight:800}
     .muted{color:var(--muted)}
-    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .card{background:var(--card);border:1px solid #1f2937;border-radius:14px;padding:12px}
-    .card img{width:100%;height:170px;object-fit:cover;border-radius:10px;border:1px solid #1f2937}
-    .price{font-weight:800;margin-top:8px}
-    .flex{display:flex;gap:10px;flex-wrap:wrap}
-    .pill{padding:6px 10px;border:1px solid #223049;border-radius:999px;color:var(--muted);font-weight:600}
-    .how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .step{background:var(--card);border:1px solid #1f2937;border-radius:14px;padding:14px}
-    .step .n{font-weight:900;color:var(--ok)}
-    .cta{background:linear-gradient(90deg,#0ea5e9,#22d3ee);color:#05263a;border-radius:16px;padding:18px;border:1px solid #1f2937}
-    .cta .row{display:flex;flex-wrap:wrap;align-items:center;gap:14px;justify-content:space-between}
-    footer{border-top:1px solid #1f2937;margin-top:30px;padding:18px 0;color:var(--muted);font-size:14px}
-
-    /* курс і гривні */
-    .rate{display:flex;align-items:center;gap:10px;margin:8px 0 0}
-    .rate input{width:90px;background:#0b1224;border:1px solid #223049;color:var(--text);border-radius:8px;padding:6px 8px}
-
-    /* «Історія та наука» */
-    .history{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:center}
-    .history .panel{background:var(--card);border:1px solid #1f2937;border-radius:14px;padding:14px}
-
-    /* адаптив */
+    .imgs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .imgs img{width:100%;height:220px;object-fit:cover;border-radius:14px;border:1px solid #294261}
+    h2{margin:0 0 12px;font-size:28px}
+    h3{margin:0 0 10px;font-size:22px}
+    .section{margin-top:28px}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .card{background:var(--panel);border:1px solid #223553;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .list{margin:8px 0 0 0;padding:0 0 0 18px}
+    .list li{margin:6px 0}
+    .aud{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .product{display:flex;gap:16px;align-items:center}
+    .product img{width:90px;height:90px;object-fit:cover;border-radius:10px;border:1px solid #294261}
+    .price{font-weight:800;color:#e6fff7}
+    .note{font-size:13px;color:#b8d1e7}
+    footer{margin:40px 0 20px;opacity:.8}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0 6px}
+    .ok{color:var(--ok)}
+    .warning{color:var(--warn)}
+    .divider{height:1px;background:#20324d;margin:26px 0}
     @media (max-width:980px){
-      .hero,.history{grid-template-columns:1fr}
-      .cards{grid-template-columns:1fr 1fr}
-      .how{grid-template-columns:1fr}
-    }
-    @media (max-width:640px){
+      .hero{grid-template-columns:1fr}
+      .imgs img{height:180px}
+      .aud{grid-template-columns:1fr}
       .cards{grid-template-columns:1fr}
-      .tile4{grid-template-columns:1fr 1fr}
+      .lead{font-size:34px}
     }
   </style>
 </head>
 <body>
+  <!-- Навігація -->
+  <header>
+    <div class="nav">
+      <h1>NUEVA</h1>
+      <div class="sp"></div>
+      <nav class="menu">
+        <a href="#about">Що це</a>
+        <a href="#science">Історія та наука</a>
+        <a href="#forwhom">Для кого</a>
+        <a href="#products">Продукти</a>
+        <a href="#delivery">Доставка</a>
+        <a href="#contact">Контакти</a>
+      </nav>
+    </div>
+  </header>
 
-<header class="nav">
-  <div class="wrap nav-inner">
-    <div class="logo">NUEVA</div>
-    <nav>
-      <a href="#about">Що це</a>
-      <a href="#history">Історія та наука</a>
-      <a href="#products">Продукти</a>
-      <a href="#how">Як працює</a>
-      <a href="#delivery">Доставка</a>
-      <a href="#contact">Контакти</a>
-    </nav>
-  </div>
-</header>
-
-<main class="wrap">
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div>
-      <h1 class="h1">Більше енергії, фокусу й&nbsp;відновлення</h1>
-      <p class="lead">
-        Мінімалістичні формули <b>Nueva</b>: пептиди для клітинної підтримки, <b>Nitro</b> для кровообігу, <b>Snow Collagen</b> для шкіри.
-        Просто, науково, помітно.
+  <!-- Hero -->
+  <main class="wrap grid hero">
+    <section>
+      <h2 class="lead">Більше енергії, фокусу й&nbsp;відновлення</h2>
+      <p class="muted">
+        Мінімалістичні формули <b>Nueva</b>: пептиди для клітинної підтримки, <b>Nitro</b> для кровообігу, <b>Snow Collagen</b> для шкіри. Просто, науково, помітно.
       </p>
-      <div class="flex" style="margin-top:14px">
-        <a class="btn btn-primary" href="#products">Дивитися продукти</a>
-        <a class="btn btn-outline" href="#contact">Отримати консультацію</a>
+      <div class="cta">
+        <a class="btn" href="#products">Дивитися продукти</a>
+        <a class="btn ghost" href="#contact">Отримати консультацію</a>
       </div>
-      <div class="flex" style="margin-top:10px">
-        <span class="pill">Жінки 25–80</span>
-        <span class="pill">Спортсмени 20–60</span>
-        <span class="pill">ЗОЖ / Biohacking</span>
+      <div class="cta">
+        <span class="chip">Жінки 25–80</span>
+        <span class="chip">Спортсмени 20–60</span>
+        <span class="chip">ЗОЖ / Biohacking</span>
       </div>
-    </div>
-    <div class="tile4">
-      <img src="beauty.jpg" alt="Nueva Beauty — пептидна підтримка шкіри, волосся й нігтів">
-      <img src="body.jpg" alt="Nueva Body — клітинний ресет 5-Amino-1MQ + SLU-PP-332">
-      <img src="nitro_sticks.jpg" alt="Nueva Nitro — нітратний напій у стіках">
-      <img src="snow_collagen.jpg" alt="Snow Collagen — водорозчинний колаген">
+    </section>
+    <aside class="imgs">
+      <img src="beauty.jpg" alt="Nueva Beauty" />
+      <img src="body.jpg" alt="Nueva Body" />
+      <img src="nitro_sticks.jpg" alt="Nueva Nitro" />
+      <img src="snow_collagen.jpg" alt="Snow Collagen" />
+    </aside>
+  </main>
+
+  <!-- Що таке пептиди / Як це працює -->
+  <section id="about" class="wrap section">
+    <div class="cards">
+      <div class="card">
+        <h3>Що таке пептиди — простими словами</h3>
+        <p>Пептиди — це короткі ланцюжки амінокислот, «посланці», що допомагають клітинам краще виконувати свою роботу: передають сигнали відновлення, підтримують вироблення енергії в мітохондріях, зменшують наслідки стресу.</p>
+        <ul class="list">
+          <li>Передають клітинам «що робити» — оновлюватися, захищатися.</li>
+          <li>Підсилюють клітинну енергетику (АТФ) та ясність мислення.</li>
+          <li>Не «чарівна пігулка», а розумне підсилення того, що організм і так уміє.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Як це працює</h3>
+        <ul class="list">
+          <li><b class="ok">Енергія:</b> підтримка мітохондрій — ваших клітинних «електростанцій».</li>
+          <li><b>Витривалість:</b> кращий кровообіг і насичення киснем завдяки <b>Nitro</b>.</li>
+          <li><b>Краса й відновлення:</b> колаген для шкіри, суглобів, волосся.</li>
+          <li><b>Фокус без «нервів»:</b> стабільна ясність замість стрибків від кави.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- ЩО ТАКЕ ПЕПТИДИ -->
-  <section class="section" id="about">
-    <h2>Що таке пептиди — простими словами</h2>
-    <p class="muted">
-      Пептиди — це короткі ланцюжки амінокислот, «посланці», які допомагають клітинам краще
-      виконувати свою роботу: передають сигнали відновлення, підтримують вироблення енергії в
-      мітохондріях, зменшують наслідки стресу. Не «чарівна пігулка», а розумне підсилення того,
-      що організм і так уміє.
-    </p>
-  </section>
-
-  <!-- ІСТОРІЯ ТА НАУКА -->
-  <section class="section" id="history">
+  <!-- Історія та наука -->
+  <section id="science" class="wrap section k pad">
     <h2>Історія та наука</h2>
-    <div class="history">
-      <div class="panel">
-        <p style="font-weight:700;margin:0 0 6px">Звідки прийшли пептиди?</p>
-        <p class="muted" style="margin:0 0 10px">
-          Перші прикладні пептидні формули створювалися для <b>космонавтів та військових</b> —
-          щоб зберігати працездатність і здоров’я у надважких умовах. Сьогодні ці технології стали
-          доступні кожному: їх вивчають у лабораторіях, тестують у клініках і застосовують у
-          превентивній медицині та спортивній підтримці.
-        </p>
-        <p class="muted" style="margin:0">
-          Ми транслюємо це у простий щоденний формат: кілька точних інгредієнтів, перевірена чистота та
-          зрозумілий ефект.
-        </p>
-      </div>
-      <div class="grid">
-        <div class="card">
-          <p style="margin:0 0 6px"><b>Фокус науки</b></p>
-          <ul class="muted" style="margin:0 0 6px;padding-left:18px">
-            <li>мітохондріальна енергія (АТФ)</li>
-            <li>сигнали відновлення клітин</li>
-            <li>оксид азоту для кровообігу</li>
-          </ul>
-          <p class="muted" style="margin:0;font-size:12px">*Матеріал має інформаційний характер і не є медичною порадою.</p>
-        </div>
-        <div class="card">
-          <p style="margin:0 0 6px"><b>Nueva у 3 словах</b></p>
-          <p class="muted" style="margin:0">Чистота, мінімалізм, відчутний результат.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ПРОДУКТИ -->
-  <section class="section" id="products">
-    <h2>Продукти та ціни</h2>
-    <p class="muted">Базові ціни у $ • <b>в гривні</b> автоматично за вашим курсом ПриватБанку.</p>
-
-    <div class="rate">
-      <label for="rate">Курс USD → UAH:</label>
-      <input id="rate" type="number" step="0.1" value="41.0" />
-      <span class="muted">Змініть за потреби — ціни в грн оновляться.</span>
-    </div>
-
-    <div class="cards" style="margin-top:14px">
-      <article class="card">
-        <img src="beauty.jpg" alt="Nueva Beauty — пептиди для шкіри, волосся і нігтів">
-        <h3 style="margin:10px 0 4px">Nueva Beauty</h3>
-        <p class="muted" style="margin:0 0 6px">Пептиди для шкіри, волосся і нігтів.</p>
-        <div class="price" data-usd="233">$233 <span class="muted uah"></span></div>
-      </article>
-
-      <article class="card">
-        <img src="body.jpg" alt="Nueva Body — клітинний ресет (5-amino-1MQ + SLU-PP-332)">
-        <h3 style="margin:10px 0 4px">Nueva Body</h3>
-        <p class="muted" style="margin:0 0 6px">Клітинний ресет: 5-amino-1MQ + SLU-PP-332.</p>
-        <div class="price" data-usd="213">$213 <span class="muted uah"></span></div>
-      </article>
-
-      <article class="card">
-        <img src="nitro_sticks.jpg" alt="Nueva Nitro — оксид азоту для кровотоку й енергії">
-        <h3 style="margin:10px 0 4px">Nueva Nitro</h3>
-        <p class="muted" style="margin:0 0 6px">Оксид азоту → кровообіг, витривалість, ясність.</p>
-        <div class="price" data-usd="56">$56 <span class="muted uah"></span></div>
-      </article>
-
-      <article class="card">
-        <img src="snow_collagen.jpg" alt="Snow Collagen — чистий водорозчинний колаген">
-        <h3 style="margin:10px 0 4px">Snow Collagen</h3>
-        <p class="muted" style="margin:0 0 6px">Чистий водорозчинний колаген.</p>
-        <div class="price" data-usd="102">$102 <span class="muted uah"></span></div>
-      </article>
-    </div>
-
-    <div class="muted" style="margin-top:8px;font-size:13px">
-      Одна таблетка пептидного комплексу може замінити 8–10 окремих вітамінних позицій — мінімум добавок, максимум користі.
-    </div>
-  </section>
-
-  <!-- ЯК ПРАЦЮЄ -->
-  <section class="section" id="how">
-    <h2>Як це працює</h2>
-    <div class="how">
-      <div class="step">
-        <div class="n">1 · Пептиди = сигнали</div>
-        <div class="muted">Подають клітині «інструкції»: оновлюватись, відновлюватися, краще виробляти енергію.</div>
-      </div>
-      <div class="step">
-        <div class="n">2 · Мітохондрії = енергія</div>
-        <div class="muted">Посилюється цикл утворення АТФ — більше сил, фокус і витривалість.</div>
-      </div>
-      <div class="step">
-        <div class="n">3 · Nitro = кровообіг</div>
-        <div class="muted">Оксид азоту розширює судини — швидше постачання кисню й поживних речовин.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ДОСТАВКА -->
-  <section class="section" id="delivery">
-    <h2>Доставка в Україну</h2>
-    <p class="muted">
-      Замовлення оформлюємо через сайт виробника. Доставляємо поштовими сервісами
-      (Meest, Нова Пошта Global, USPS→Укрпошта). Допомагаю з оформленням і супроводом.
+    <p>
+      Перші дослідження пептидів розвивалися у програмах з підвищених навантажень — для <b>космонавтів</b> і <b>військових</b>, щоб зберігати здоров’я та працездатність у надважких умовах. 
+      Сьогодні ці технології стали доступні кожному: безпечні дози, контроль чистоти, чіткі протоколи використання.
     </p>
+    <p class="note">Ми опираємося на сучасну літературу з клітинної біології та метаболізму, а також на принципи доказового підходу.</p>
   </section>
 
-  <!-- КОНТАКТИ -->
-  <section class="section cta" id="contact">
-    <div class="row">
-      <div>
-        <h2 style="margin:0 0 6px">Потрібна порада чи підбір?</h2>
-        <div class="muted">Напишіть у Telegram або подзвоніть — відповім особисто.</div>
+  <!-- Для кого -->
+  <section id="forwhom" class="wrap section">
+    <h2>Для кого це працює найкраще</h2>
+    <div class="aud">
+      <div class="card">
+        <h3>Жінки 25–80</h3>
+        <p class="muted">Шкіра, волосся, баланс енергії, гормональна підтримка способу життя.</p>
       </div>
-      <div class="flex">
-        <a class="btn btn-primary" href="https://t.me/+ir3g8RhuXdRmYzAy" target="_blank" rel="noopener">Telegram-канал</a>
-        <a class="btn btn-outline" href="tel:+380503709687">+380&nbsp;50&nbsp;370&nbsp;9687</a>
+      <div class="card">
+        <h3>Спортсмени 20–60</h3>
+        <p class="muted">Витривалість, відновлення після навантажень, концентрація без стимуляторів.</p>
+      </div>
+      <div class="card">
+        <h3>ЗОЖ / Біохакінг</h3>
+        <p class="muted">Профілактика запалення, ясний розум, підтримка довголіття.</p>
       </div>
     </div>
-    <div class="muted" style="margin-top:8px;font-size:13px">Партнер: Олександр</div>
   </section>
-</main>
 
-<footer>
-  <div class="wrap">
-    © <span id="y"></span> NUEVA • Інформація носить ознайомчий характер і не замінює консультацію лікаря.
-  </div>
-</footer>
+  <!-- Продукти (ціни — тільки після пояснення) -->
+  <section id="products" class="wrap section">
+    <h2>Наші продукти</h2>
 
-<!-- JS: гривні за вашим курсом + рік -->
-<script>
-  const rateInput = document.getElementById('rate');
-  const prices = document.querySelectorAll('.price');
-  function renderUAH(){
-    const r = parseFloat(rateInput.value||0);
-    prices.forEach(p=>{
-      const usd = parseFloat(p.dataset.usd);
-      const uah = r? Math.round(usd*r) : '';
-      const el = p.querySelector('.uah');
-      el.textContent = r? `· ~${uah.toLocaleString('uk-UA')} ₴` : '';
+    <div class="card product">
+      <img src="beauty.jpg" alt="Nueva Beauty">
+      <div>
+        <h3>Nueva Beauty</h3>
+        <p class="muted">Пептидний комплекс для шкіри, волосся і нігтів. Підтримує синтез колагену та здоровий вигляд.</p>
+        <div class="price">$233 <span class="note">або гривня за курсом ПриватБанк</span></div>
+      </div>
+    </div>
+
+    <div class="card product">
+      <img src="body.jpg" alt="Nueva Body">
+      <div>
+        <h3>Nueva Body</h3>
+        <p class="muted">Клітинний «ресет»: 5-amino-1MQ + SLU-PP-332. Підтримка метаболізму, чиста енергія без нервового піку.</p>
+        <div class="price">$213 <span class="note">або гривня за курсом ПриватБанк</span></div>
+      </div>
+    </div>
+
+    <div class="card product">
+      <img src="nitro_sticks.jpg" alt="Nueva Nitro">
+      <div>
+        <h3>Nueva Nitro</h3>
+        <p class="muted">Оксид азоту для кровообігу і швидкого відчуття енергії. Більше кисню — кращий фокус та витривалість.</p>
+        <div class="price">$56 <span class="note">або гривня за курсом ПриватБанк</span></div>
+      </div>
+    </div>
+
+    <div class="card product">
+      <img src="snow_collagen.jpg" alt="Snow Collagen">
+      <div>
+        <h3>Snow Collagen</h3>
+        <p class="muted">Чистий водорозчинний колаген для шкіри, суглобів і відновлення тканин.</p>
+        <div class="price">$102 <span class="note">або гривня за курсом ПриватБанк</span></div>
+      </div>
+    </div>
+
+    <p class="note">Одна таблетка пептидного комплексу може замінити 8–10 окремих «вітамінних» добавок за дією на клітинному рівні.</p>
+
+    <div class="cta">
+      <a class="btn" href="#contact">Підібрати протокол з консультантом</a>
+      <a class="btn ghost" href="#delivery">Доставка в Україну</a>
+    </div>
+  </section>
+
+  <!-- Доставка -->
+  <section id="delivery" class="wrap section k pad">
+    <h2>Доставка в Україну</h2>
+    <p>Замовлення оформлюються через офіційний сайт виробника. Доставка здійснюється поштовими сервісами <b>Meest</b>, <b>Нова Пошта Global</b>, <b>USPS → Укрпошта</b>. Я допомагаю з оформленням і супроводом: від вибору до відстеження посилки.</p>
+  </section>
+
+  <!-- Контакти -->
+  <section id="contact" class="wrap section">
+    <h2>Контакти</h2>
+    <p>Телеграм-канал: <a href="https://t.me/+ir3g8RhuXdRmYzAy" target="_blank" rel="noopener">Nueva | Старт можливостей 🌀</a></p>
+    <p>Телефон: <a href="tel:+380503709687">+380&nbsp;50&nbsp;370&nbsp;96&nbsp;87</a> — Олександр</p>
+    <div class="cta">
+      <a class="btn" href="https://t.me/+ir3g8RhuXdRmYzAy" target="_blank" rel="noopener">Написати в Telegram</a>
+      <a class="btn ghost" href="#products">Переглянути продукти</a>
+    </div>
+    <div class="divider"></div>
+    <p class="note">© NUEVA • Партнер: Олександр</p>
+  </section>
+
+  <script>
+    // плавний скрол за якорями
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href');
+        if(id.length>1){
+          e.preventDefault();
+          document.querySelector(id)?.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
     });
-  }
-  rateInput.addEventListener('input', renderUAH);
-  renderUAH();
-  document.getElementById('y').textContent = new Date().getFullYear();
-</script>
-
+  </script>
 </body>
 </html>
