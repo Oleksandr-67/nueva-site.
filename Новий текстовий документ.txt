@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NUEVA — офіційний лендинг Олександра</title>
+  <meta name="description" content="Nueva Beauty, Body, Nitro, Snow Collagen — кому це потрібно, як працює, як замовити і доставити в Україну." />
+  <meta property="og:title" content="NUEVA — офіційний лендинг Олександра" />
+  <meta property="og:description" content="Яскравий, інформативний старт: для кого, навіщо, як це працює і як отримати в Україні." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://oleksandr-67.github.io/nueva-site/" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html{scroll-behavior:smooth}
+    .glass{backdrop-filter:saturate(180%) blur(14px);background:rgba(255,255,255,.06)}
+    .card{border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.04)}
+    .badge{font-size:.75rem;border:1px solid rgba(255,255,255,.15);padding:.15rem .5rem;border-radius:.5rem}
+    .chip{background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.35);color:#e0f2fe;padding:.35rem .6rem;border-radius:9999px;font-size:.75rem}
+    .diagram circle{opacity:.95}
+    .price b{font-size:1.1rem}
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 glass border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="font-semibold tracking-wide">NUEVA</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#why" class="hover:text-cyan-300">Для кого</a>
+        <a href="#products" class="hover:text-cyan-300">Продукти</a>
+        <a href="#how" class="hover:text-cyan-300">Як це працює</a>
+        <a href="#shipping" class="hover:text-cyan-300">Доставка в Україну</a>
+        <a href="#contact" class="hover:text-cyan-300">Контакт</a>
+      </nav>
+      <a href="https://nuevalife.com/oleksandr" target="_blank" class="inline-flex items-center gap-2 bg-cyan-400 text-slate-900 font-semibold px-4 py-2 rounded-xl shadow hover:brightness-110">Подивитись ціну</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-cyan-500/15 via-slate-800/30 to-slate-900"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="chip inline-block">Офіційний партнер — Олександр</p>
+        <h1 class="mt-3 text-3xl sm:text-5xl font-extrabold leading-tight">Більше енергії, фокус і відновлення — без зайвого.</h1>
+        <p class="mt-4 text-lg text-slate-300">Мінімалістичні формули Nueva: пептиди для клітинної підтримки, Nitro для кровообігу, Snow Collagen для шкіри. Зрозуміло, чесно, без “магії”.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#products" class="px-5 py-3 rounded-xl bg-white text-slate-900 font-semibold">До продуктів</a>
+          <a href="https://nuevalife.com/oleksandr" target="_blank" class="px-5 py-3 rounded-xl border border-white/30 font-semibold hover:bg-white/10">Актуальні ціни</a>
+        </div>
+        <div class="mt-6 flex gap-2 text-xs text-slate-400">
+          <span class="badge">Оригінальні упаковки</span>
+          <span class="badge">Швидка консультація</span>
+          <span class="badge">Допомога з доставкою в Україну</span>
+        </div>
+        <!-- Курс для конвертації -->
+        <div class="mt-6 text-sm text-slate-300">Курс ПриватБанк, грн/$:
+          <input id="rate" type="number" step="0.01" class="ml-2 px-3 py-2 rounded-md bg-white/10 border border-white/10 w-28" placeholder="вкажіть курс" oninput="recalc()"/>
+          <span class="text-xs text-slate-400 ml-2">(ціни в ₴ оновляться авт.)</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <img src="./краса.jpg" alt="Nueva Beauty" class="rounded-2xl aspect-[4/5] w-full object-cover">
+        <img src="./тіло.jpg" alt="Nueva Body" class="rounded-2xl aspect-[4/5] w-full object-cover">
+        <img src="./нітро_палички.jpg" alt="Nueva Nitro" class="rounded-2xl aspect-[4/5] w-full object-cover">
+        <img src="./сніговий_колаген.jpg" alt="Snow Collagen" class="rounded-2xl aspect-[4/5] w-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Для кого -->
+  <section id="why" class="py-14">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold">Кому це потрібно</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-6 text-slate-200">
+        <div class="card p-5 rounded-2xl">
+          <h3 class="font-semibold">Енергія і продуктивність</h3>
+          <p class="mt-2 text-sm text-slate-300">Коли бракує фокусу й витривалості протягом дня.</p>
+        </div>
+        <div class="card p-5 rounded-2xl">
+          <h3 class="font-semibold">Відновлення та тонус</h3>
+          <p class="mt-2 text-sm text-slate-300">Підтримка після стресу/навантажень, бажання відчувати легкість.</p>
+        </div>
+        <div class="card p-5 rounded-2xl">
+          <h3 class="font-semibold">Шкіра, волосся, нігті</h3>
+          <p class="mt-2 text-sm text-slate-300">Коли хочеться пружності шкіри й доглянутого вигляду зсередини.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Продукти з ціною -->
+  <section id="products" class="py-16 bg-slate-950/40 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold">Продукти і ціни</h2>
+      <p class="mt-2 text-slate-300">Ціни в $ фіксовані; сума в ₴ рахується за курсом ПриватБанк у день оплати.</p>
+
+      <div class="mt-8 grid md:grid-cols-4 gap-6">
+        <!-- Beauty -->
+        <article class="rounded-2xl card p-5">
+          <img class="aspect-[4/3] w-full rounded-xl mb-4" src="./краса.jpg" alt="Nueva Beauty">
+          <h3 class="text-lg font-semibold">Nueva Beauty</h3>
+          <p class="mt-2 text-sm text-slate-300">Пептидний стек для шкіри/волосся/нігтів. Пружність, гладкість, сяйво.</p>
+          <div class="price mt-3 text-sm text-slate-200"><b>$233</b> · <span id="uah-beauty" class="text-slate-300">≈ 0 грн</span></div>
+          <a href="https://nuevalife.com/oleksandr" target="_blank" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-400 text-slate-900 font-semibold">Дивитись ціну на сайті</a>
+        </article>
+        <!-- Body -->
+        <article class="rounded-2xl card p-5">
+          <img class="aspect-[4/3] w-full rounded-xl mb-4" src="./тіло.jpg" alt="Nueva Body">
+          <h3 class="text-lg font-semibold">Nueva Body</h3>
+          <p class="mt-2 text-sm text-slate-300">5-Amino-1MQ + SLU-PP-332 — мінімалістичний клітинний «ресет».</p>
+          <div class="price mt-3 text-sm text-slate-200"><b>$213</b> · <span id="uah-body" class="text-slate-300">≈ 0 грн</span></div>
+          <a href="https://nuevalife.com/oleksandr" target="_blank" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-400 text-slate-900 font-semibold">Дивитись ціну на сайті</a>
+        </article>
+        <!-- Nitro -->
+        <article class="rounded-2xl card p-5">
+          <img class="aspect-[4/3] w-full rounded-xl mb-4" src="./нітро_палички.jpg" alt="Nueva Nitro">
+          <h3 class="text-lg font-semibold">Nueva Nitro</h3>
+          <p class="mt-2 text-sm text-slate-300">Підтримка оксиду азоту (NO): кровотік, доставка кисню/поживних речовин.</p>
+          <div class="price mt-3 text-sm text-slate-200"><b>$56</b> · <span id="uah-nitro" class="text-slate-300">≈ 0 грн</span></div>
+          <a href="https://nuevalife.com/oleksandr" target="_blank" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-400 text-slate-900 font-semibold">Дивитись ціну на сайті</a>
+        </article>
+        <!-- Snow Collagen -->
+        <article class="rounded-2xl card p-5">
+          <img class="aspect-[4/3] w-full rounded-xl mb-4" src="./сніговий_колаген.jpg" alt="Snow Collagen">
+          <h3 class="text-lg font-semibold">Snow Collagen</h3>
+          <p class="mt-2 text-sm text-slate-300">Чистий, водорозчинний колаген. Зручно додавати у каву чи воду.</p>
+          <div class="price mt-3 text-sm text-slate-200"><b>$102</b> · <span id="uah-collagen" class="text-slate-300">≈ 0 грн</span></div>
+          <a href="https://nuevalife.com/oleksandr" target="_blank" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-400 text-slate-900 font-semibold">Дивитись ціну на сайті</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Як це працює -->
+  <section id="how" class="py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold">Як це працює — коротко та по суті</h2>
+      <div class="mt-8 grid lg:grid-cols-2 gap-10">
+        <!-- Пептиди -->
+        <div class="card rounded-2xl p-6">
+          <h3 class="text-xl font-semibold">Пептиди (Beauty/Body)</h3>
+          <svg class="diagram mt-4" viewBox="0 0 520 160" width="100%" height="160">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1"><stop offset="0%" stop-color="#67e8f9"/><stop offset="100%" stop-color="#22d3ee"/></linearGradient>
+            </defs>
+            <circle cx="60" cy="80" r="36" fill="url(#g1)"/>
+            <text x="60" y="85" text-anchor="middle" fill="#0f172a" font-size="12">Пептид</text>
+            <rect x="120" y="70" width="120" height="20" rx="10" fill="#38bdf8"/>
+            <text x="180" y="84" text-anchor="middle" fill="#0f172a" font-size="12">Сигнал клітині</text>
+            <circle cx="340" cy="80" r="36" fill="#22c55e"/>
+            <text x="340" y="76" text-anchor="middle" fill="#052e16" font-size="11">Відновл.</text>
+            <text x="340" y="92" text-anchor="middle" fill="#052e16" font-size="11">та баланс</text>
+            <circle cx="460" cy="80" r="36" fill="#f59e0b"/>
+            <text x="460" y="85" text-anchor="middle" fill="#422006" font-size="11">Відчуття
+енергії</text>
+          </svg>
+          <ul class="mt-3 text-sm text-slate-300 list-disc list-inside">
+            <li>Короткі ланцюжки амінокислот → «повідомлення» для клітин.</li>
+            <li>Підтримка процесів відновлення та гомеостазу.*</li>
+          </ul>
+          <p class="mt-2 text-xs text-slate-400">*Не медичні рекомендації. Результати індивідуальні.</p>
+        </div>
+        <!-- Nitro -->
+        <div class="card rounded-2xl p-6">
+          <h3 class="text-xl font-semibold">Nueva Nitro (оксид азоту, NO)</h3>
+          <svg class="diagram mt-4" viewBox="0 0 520 160" width="100%" height="160">
+            <defs>
+              <linearGradient id="g2" x1="0" x2="1"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#6366f1"/></linearGradient>
+            </defs>
+            <circle cx="60" cy="80" r="36" fill="url(#g2)"/>
+            <text x="60" y="85" text-anchor="middle" fill="#0f172a" font-size="12">Nitro</text>
+            <rect x="120" y="70" width="120" height="20" rx="10" fill="#8b5cf6"/>
+            <text x="180" y="84" text-anchor="middle" fill="#eef2ff" font-size="12">↑ Оксид азоту</text>
+            <circle cx="340" cy="80" r="36" fill="#22c55e"/>
+            <text x="340" y="76" text-anchor="middle" fill="#052e16" font-size="11">Розширення</text>
+            <text x="340" y="92" text-anchor="middle" fill="#052e16" font-size="11">судин</text>
+            <circle cx="460" cy="80" r="36" fill="#f59e0b"/>
+            <text x="460" y="76" text-anchor="middle" fill="#422006" font-size="11">Кровотік</text>
+            <text x="460" y="92" text-anchor="middle" fill="#422006" font-size="11">енергія/фокус</text>
+          </svg>
+          <ul class="mt-3 text-sm text-slate-300 list-disc list-inside">
+            <li>NO = сигнальна молекула для судин → кращий кровотік.</li>
+            <li>Доставка кисню та поживних речовин у тканини → відчуття тонусу.*</li>
+          </ul>
+          <p class="mt-2 text-xs text-slate-400">*Не медичні рекомендації. Результати індивідуальні.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Доставка в Україну -->
+  <section id="shipping" class="py-16 bg-slate-950/40 border-y border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-bold">Як замовити і доставити в Україну</h2>
+      <ol class="mt-6 grid md:grid-cols-3 gap-6 text-slate-200">
+        <li class="card p-5 rounded-2xl"><span class="chip">Крок 1</span>
+          <h3 class="mt-2 font-semibold">Оформлення замовлення</h3>
+          <p class="mt-2 text-sm text-slate-300">Перейди за моїм офіційним лінком і вибери продукт. Актуальна ціна відображається на сайті виробника.</p>
+        </li>
+        <li class="card p-5 rounded-2xl"><span class="chip">Крок 2</span>
+          <h3 class="mt-2 font-semibold">Адреса доставки</h3>
+          <p class="mt-2 text-sm text-slate-300">Якщо пряма доставка в 🇺🇦 недоступна — використовуємо форвардер: <strong>Meest USA, Nova Poshta Global, USPS→Укрпошта</strong>. Я допоможу оформити.</p>
+        </li>
+        <li class="card p-5 rounded-2xl"><span class="chip">Крок 3</span>
+          <h3 class="mt-2 font-semibold">Отримання</h3>
+          <p class="mt-2 text-sm text-slate-300">Трекінг посилки, орієнтовно 8–21 день залежно від сервісу та митниці. Оплата доставки — за тарифами перевізника.</p>
+        </li>
+      </ol>
+      <p class="mt-4 text-xs text-slate-400">* Точні умови/строки залежать від перевізника та ситуації на митниці.</p>
+    </div>
+  </section>
+
+  <!-- Контакт і допомога -->
+  <section id="contact" class="py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold">Потрібна персональна допомога?</h2>
+      <p class="mt-2 text-slate-300">Підкажу з вибором, оформленням замовлення та доставкою в Україну.</p>
+      <div class="mt-6 grid sm:grid-cols-2 gap-3 justify-center">
+        <a href="https://t.me/+ir3g8RhuXdRmYzAy" target="_blank" class="px-6 py-3 rounded-xl border border-white/20 font-semibold hover:bg-white/10">Telegram: Nueva | Старт можливостей 🌀</a>
+        <a href="tel:+380503709687" class="px-6 py-3 rounded-xl border border-white/20 font-semibold hover:bg-white/10">+380503709687 — Олександр</a>
+        <a href="https://nuevalife.com/oleksandr" target="_blank" class="sm:col-span-2 px-6 py-3 rounded-xl bg-cyan-400 text-slate-900 font-semibold">Перейти до магазину</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-sm text-slate-400">
+    © <span id="y"></span> Nueva • Партнер: Олександр
+  </footer>
+
+  <script>
+    // USD → UAH calculator by user-entered PrivatBank rate
+    const USD = { beauty:233, body:213, nitro:56, collagen:102 };
+    function recalc(){
+      const r = parseFloat(document.getElementById('rate').value || '0');
+      const set = (id, usd)=>{
+        const el = document.getElementById(id);
+        if(!el) return;
+        const uah = r>0 ? Math.round(usd*r).toLocaleString('uk-UA')+" грн" : "≈ 0 грн";
+        el.textContent = uah;
+      };
+      set('uah-beauty', USD.beauty);
+      set('uah-body', USD.body);
+      set('uah-nitro', USD.nitro);
+      set('uah-collagen', USD.collagen);
+    }
+  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
