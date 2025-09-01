@@ -1,87 +1,69 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="uk">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nueva Nitro — кисень і кровообіг</title>
-  <link rel="icon" href="data:,">
-  <style>
-    :root{--bg:#0f1b28;--panel:#152433;--text:#dce7f3;--muted:#9fb4c7;--accent:#5fd1ff}
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
-    a{color:var(--accent)} header,footer{max-width:1120px;margin:auto;padding:16px 20px}
-    nav{display:flex;gap:14px;flex-wrap:wrap}
-    nav a{padding:6px 10px;border-radius:8px;background:rgba(255,255,255,.04);text-decoration:none}
-    .wrap{max-width:1120px;margin:auto;padding:20px}
-    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
-    .card{background:#152433;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px}
-    .price{font-size:28px;font-weight:700;margin:6px 0}
-    .btns{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
-    .btn{background:#1e3448;border:1px solid rgba(255,255,255,.14);padding:10px 14px;border-radius:10px;color:var(--text);text-decoration:none}
-    .btn.primary{background:linear-gradient(135deg,#33b1ff,#1583d7)}
-    .badge{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:6px 10px;border-radius:999px;color:#9fb4c7;font-size:13px;margin-right:8px}
-    img.hero{width:100%;height:auto;border-radius:16px;border:1px solid rgba(255,255,255,.08)}
-    h1{margin:.2em 0 .3em;font-size:34px} h2{margin:0 0 .4em}
-    ul{margin:.2em 0 .8em 1.2em} li{margin:.25em 0}
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-<header>
-  <nav>
-    <a href="index.html">← На головну</a>
-    <a href="product-beauty.html">Beauty</a>
-    <a href="product-body.html">Body</a>
-    <a href="product-nitro.html">Nitro</a>
-    <a href="product-collagen.html">Snow Collagen</a>
-  </nav>
-</header>
+<nav>
+  <div class="container navbar">
+    <div class="brand">NUEVA</div>
+    <div class="menu">
+      <a href="index.html">На головну</a>
+      <a href="product-beauty.html">Beauty</a>
+      <a href="product-body.html">Body</a>
+      <a href="product-collagen.html">Snow Collagen</a>
+      <a href="prices.html">Ціни</a>
+    </div>
+  </div>
+</nav>
 
-<main class="wrap">
-  <div class="grid">
-    <section class="card">
-      <h1>Nueva Nitro — кисень і кровообіг</h1>
-      <p>Напій оксиду азоту для швидкої підтримки кровообігу та насичення тканин киснем. Бадьорість, витривалість, ясність мислення — без «провалів» від кави.</p>
-      <div class="price">$56 <span class="badge">≈ за курсом ПриватБанк</span></div>
-      <div class="btns">
-        <a class="btn primary" href="https://t.me/+ir3g8RhuXdRmYzAy" target="_blank">Консультація в Telegram</a>
-        <a class="btn" href="tel:+380503709687">Подзвонити: +380&nbsp;50&nbsp;370&nbsp;9687</a>
+<div class="container">
+  <div class="row grid-2">
+    <section class="panel">
+      <h1 class="h1">Nueva Nitro — кисень і кровообіг</h1>
+      <p class="lead">Напій оксиду азоту для швидкої підтримки кровообігу та насичення тканин киснем. Бадьорість, витривалість, ясність мислення — без «провалів» від кави.</p>
+
+      <p class="price">$56</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+        <a class="btn" href="https://t.me/+ir3g8RhuXdRmYzAy" target="_blank" rel="noopener">Консультація в Telegram</a>
+        <a class="btn ghost" href="tel:+380503709687">Подзвонити • +380 50 370 9687</a>
       </div>
-      <div class="badge">Почувається за ~45 хв</div><div class="badge">До тренувань</div><div class="badge">Разом з Body</div>
 
-      <h2>Як приймати</h2>
-      <ul>
-        <li>Розчиніть 1 стік у 250–300&nbsp;мл води.</li>
-        <li><b>1–2 рази на день:</b> вранці та/або за 30 хв до тренування чи інтенсивної розумової роботи.</li>
-        <li>Якщо чутливі до тонізуючого ефекту — уникайте пізнього вечора.</li>
+      <div class="tag">Відчувається за ~45 хв</div>
+      <div class="tag">До тренувань</div>
+
+      <h2 class="h2" style="margin-top:16px">Як приймати</h2>
+      <ul class="list">
+        <li>Розчинити 1 саше у <b>350 мл</b> води кімнатної температури без газу.</li>
+        <li>Легенько струсити, залишити на 5 хв для активації; випити натще.</li>
+        <li>Рекомендація: зачекати ~30 хв перед їжею/напоями.</li>
+        <li>1–2 рази на день: вранці та/або за 30 хв до тренування чи інтенсивної роботи.</li>
       </ul>
 
-      <h2>Поради</h2>
-      <ul>
-        <li>Комбінуйте з <a href="product-body.html">Body</a> для фокусу й витривалості.</li>
+      <h3 class="h2">Поради</h3>
+      <ul class="list">
+        <li>Комбінуйте з <b>Body</b> для фокусу й витривалості.</li>
         <li>Пийте додаткову воду протягом дня.</li>
       </ul>
 
-      <h2>Застереження</h2>
-      <ul>
+      <h3 class="h2">Застереження</h3>
+      <ul class="list">
         <li>Індивідуальна чутливість до нітратів — припиніть прийом за дискомфорту.</li>
-        <li>Не для вагітних/годуючих. За хронічних станів — консультуйтеся з лікарем.</li>
+        <li>Не для вагітних/годуючих; за хронічних станів — консультуйтеся з лікарем.</li>
       </ul>
     </section>
 
-    <aside>
-      <img class="hero" src="nitro_sticks.jpg" alt="Nueva Nitro sticks">
-      <div class="card">
-        <h2>Для кого</h2>
-        <ul>
-          <li>Ті, хто хоче більше кисню для мозку, серця, м’язів.</li>
-          <li>Підтримка під час спорту та навантажень.</li>
-        </ul>
-      </div>
-    </aside>
+    <aside class="panel"><img src="nitro_sticks.jpg" alt="Nueva Nitro" /></aside>
   </div>
-</main>
+</div>
 
-<footer>
-  Telegram: <a href="https://t.me/+ir3g8RhuXdRmYzAy" target="_blank">Nueva | Старт можливостей 🌀</a> · Телефон: <a href="tel:+380503709687">+380503709687</a> · Партнер: Олександр
+<footer class="container footer" style="padding-bottom:28px">
+  <a href="index.html">← На головну</a>
 </footer>
 </body>
 </html>
