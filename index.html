@@ -1,322 +1,236 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NUEVA — пептиди, енергія, відновлення</title>
-  <meta name="description" content="NUEVA: пептиди для клітинної підтримки, Nitro для кровообігу, Snow Collagen для шкіри. Відгуки, перед/після, інструкції прийому. Консультація українською."/>
-  <style>
-    :root{--bg:#0f1b2a;--pane:#15243a;--muted:#a6c2e2;--text:#eaf3ff;--accent:#2ea8ff;--ok:#2ecc71;--line:#ffffff22}
-    *{box-sizing:border-box}
-    html,body{margin:0;background:radial-gradient(1000px 600px at -10% -10%,#1a3352 0,transparent 60%),var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial}
-    a{color:inherit}
-    .wrap{max-width:1150px;margin:0 auto;padding:18px}
-    header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(15,27,42,.95),rgba(15,27,42,.6));backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
-    .bar{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{font-weight:800;letter-spacing:.12em}
-    nav a{padding:10px 12px;margin:0 2px;border-radius:10px;color:#cfe2f6;text-decoration:none}
-    nav a:hover{background:#ffffff14;color:#fff}
-    .btn{display:inline-block;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700;cursor:pointer;border:none}
-    .btn.primary{background:var(--accent);color:#021420}
-    .btn.ok{background:var(--ok);color:#032013}
-    .chip{display:inline-block;background:#0a1626;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:13px;margin-right:8px;margin-top:8px;color:#cfe2f6}
-    .card{background:var(--pane);border:1px solid var(--line);border-radius:18px;padding:18px}
-    .grid{display:grid;gap:22px}
-    .grid-2{grid-template-columns:1.1fr 1fr}
-    .grid-3{grid-template-columns:repeat(3,1fr)}
-    .grid-4{grid-template-columns:repeat(4,1fr)}
-    .hero{border-radius:20px;padding:42px 28px;background:radial-gradient(900px 500px at 15% 0%,rgba(255,255,255,.06),transparent 60%),linear-gradient(180deg,#12263f,#0e1a2b)}
-    .hero h1{font-size:42px;line-height:1.12;margin:0 0 10px}
-    .muted{color:var(--muted)}
-    .bullets{padding-left:18px}.bullets li{margin:6px 0}
-    .imgbox{border-radius:16px;overflow:hidden;border:1px solid #ffffff18;background:#0b1624}
-    .imgbox img{display:block;width:100%;height:auto}
-    .note{font-size:13px;color:#9eb6d4}
-    .prices table{width:100%;border-collapse:collapse}.prices th,.prices td{padding:10px;border-bottom:1px solid #ffffff16;text-align:left}
-    .stars{color:#ffd05a;letter-spacing:1px}
-    .review p{margin:.2rem 0}
-    .ba{display:grid;gap:18px}
-    .ba .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .ba .pair figure{margin:0}
-    .ba img{width:100%;height:260px;object-fit:cover;border-radius:12px;border:1px solid #ffffff18;background:#0b1624}
-    .ba figcaption{font-size:13px;color:#cfe2f6;opacity:.9;margin-top:6px}
-    footer{margin-top:28px;border-top:1px solid var(--line);padding:22px 0;color:#9eb6d4}
-    @media (max-width:920px){.grid-2{grid-template-columns:1fr}.grid-4{grid-template-columns:1fr 1fr}.hero h1{font-size:34px}.ba .pair{grid-template-columns:1fr}}
-    @media (max-width:600px){.grid-4{grid-template-columns:1fr}}
-  </style>
+  <meta name="description" content="Пептиди NUEVA: Nitro — кисень і кровообіг, Snow Collagen — шкіра та суглоби, Beauty — нічне відновлення, Body — клітинний “ресет”." />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
 
-<header>
-  <div class="wrap bar">
+<nav>
+  <div class="container navbar">
     <div class="brand">NUEVA</div>
-    <nav>
+    <div class="menu">
       <a href="#what">Що це</a>
       <a href="#how">Як працює</a>
       <a href="#science">Історія та наука</a>
       <a href="#audience">Для кого</a>
       <a href="#products">Продукти</a>
       <a href="#reviews">Відгуки</a>
-      <a href="#beforeafter">Перед/Після</a>
-      <a href="#prices">Ціни</a>
+      <a href="#before-after">Перед/Після</a>
+      <a href="prices.html">Ціни</a>
       <a href="#delivery">Доставка</a>
       <a href="#contact">Контакти</a>
-    </nav>
+    </div>
+  </div>
+</nav>
+
+<header class="container hero">
+  <div class="row grid-2 panel">
+    <section>
+      <p class="kicker">Фокус • Енергія • Відновлення</p>
+      <h1 class="h1">Більше енергії, фокусу й відновлення</h1>
+      <p class="lead">
+        Пептиди допомагають клітинам «пам’ятати», як бути молодими та здоровими.
+        <b>Nitro</b> — кровообіг і кисень, <b>Snow Collagen</b> — шкіра й суглоби,
+        <b>Beauty</b> — нічне відновлення, <b>Body</b> — клітинна підтримка і метаболічний «ресет».
+      </p>
+      <div style="margin:14px 0 6px">
+        <a class="btn" href="#products">Дивитися продукти</a>
+        <a class="btn secondary" href="#contact">Отримати консультацію</a>
+      </div>
+      <div style="margin-top:8px">
+        <span class="tag">Жінкам 25–80</span>
+        <span class="tag">Спортсменам 20–60</span>
+        <span class="tag">ЗОЖ / біохакінг</span>
+      </div>
+    </section>
+    <section>
+      <div class="row grid-2">
+        <img src="beauty.jpg" alt="Nueva Beauty" />
+        <img src="body.jpg" alt="Nueva Body" />
+        <img src="nitro_sticks.jpg" alt="Nueva Nitro" />
+        <img src="snow_collagen.jpg" alt="Snow Collagen" />
+      </div>
+    </section>
   </div>
 </header>
 
-<main class="wrap">
+<main class="container">
 
-  <!-- HERO -->
-  <section class="hero card" id="top">
-    <div class="grid grid-2" style="align-items:center">
-      <div>
-        <h1>Більше енергії, фокусу й&nbsp;відновлення</h1>
-        <p class="muted" style="margin:0 0 16px">
-          Пептиди допомагають клітинам «пам’ятати», як бути молодими та здоровими.
-          <strong>Nitro</strong> — кровообіг і кисень, <strong>Snow Collagen</strong> — шкіра й суглоби,
-          <strong>Beauty</strong> та <strong>Body</strong> — клітинна підтримка і метаболічний «ресет».
-        </p>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin:0 0 8px">
-          <a class="btn primary" href="#products">Дивитися продукти</a>
-          <a class="btn ok" href="#contact">Отримати консультацію</a>
-        </div>
-        <div>
-          <span class="chip">Жінкам 25–80</span>
-          <span class="chip">Спортсменам 20–60</span>
-          <span class="chip">ЗОЖ / біохакінг</span>
-        </div>
-      </div>
-      <div class="grid grid-2">
-        <div class="imgbox"><img src="beauty.jpg" alt="Nueva Beauty — шкіра, волосся, нігті" loading="eager"></div>
-        <div class="imgbox"><img src="body.jpg" alt="Nueva Body — 5-amino-1MQ + SLU-PP-332" loading="eager"></div>
-        <div class="imgbox"><img src="nitro_sticks.jpg" alt="Nueva Nitro — енергія і кровообіг" loading="eager"></div>
-        <div class="imgbox"><img src="snow_collagen.jpg" alt="Snow Collagen — водорозчинний колаген" loading="eager"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ЩО ТАКЕ -->
-  <section id="what" class="card" style="margin-top:22px">
-    <h2>Що таке пептиди — простими словами</h2>
-    <p class="muted">Пептиди — короткі ланцюжки амінокислот, «посланці», що запускають відновлення, підтримують мітохондрії (енергію) і зменшують наслідки стресу. Це не чарівна пігулка, а розумне підсилення функцій організму.</p>
-  </section>
-
-  <!-- ЯК ПРАЦЮЄ -->
-  <section id="how" class="grid grid-2" style="margin-top:22px">
-    <div class="card">
-      <h2>Як це працює</h2>
-      <ul class="bullets">
-        <li>⚡ <strong>Енергія</strong>: підтримка мітохондрій — «електростанцій» клітин.</li>
-        <li>💧 <strong>Кровообіг</strong>: <em>Nitro</em> → оксид азоту → краще насичення киснем.</li>
-        <li>✨ <strong>Краса й відновлення</strong>: колаген для шкіри, суглобів, волосся.</li>
-        <li>🧠 <strong>Фокус без «гойдалок»</strong>: стабільна ясність, а не піки від кави.</li>
+  <!-- ЩО ТАКЕ ПЕПТИДИ -->
+  <section id="what" class="row grid-2">
+    <div class="panel">
+      <h2 class="h2">Що таке пептиди — простими словами</h2>
+      <ul class="list">
+        <li>Короткі ланцюжки амінокислот — «посланці», що допомагають клітинам краще виконувати свою роботу.</li>
+        <li>Передають сигнали відновлення, підтримують енергетику (АТФ) в мітохондріях, зменшують наслідки стресу.</li>
+        <li>Це не «чарівна пігулка», а розумне підсилення природних функцій організму.</li>
       </ul>
-      <p class="note">Примітка: добавки не замінюють лікування і не є ліками.</p>
     </div>
-    <div class="card">
-      <h2>Для кого</h2>
-      <ul class="bullets">
-        <li>Жінкам 25–80 — тонус, шкіра, баланс енергії.</li>
-        <li>Спортсменам 20–60 — витривалість і швидше відновлення.</li>
-        <li>Тим, хто дбає про довголіття — метаболізм і спокійна ясність.</li>
+    <div id="how" class="panel">
+      <h2 class="h2">Як це працює</h2>
+      <ul class="list">
+        <li><b>Енергія:</b> підтримка мітохондрій — «електростанцій» клітин.</li>
+        <li><b>Витривалість:</b> кращий кровообіг і насичення киснем завдяки <b>Nitro</b>.</li>
+        <li><b>Краса й відновлення:</b> колаген для шкіри, суглобів, волосся.</li>
+        <li><b>Фокус без «енергія-провалів»:</b> стабільна ясність замість стрибків від кави.</li>
       </ul>
     </div>
   </section>
 
   <!-- ІСТОРІЯ ТА НАУКА -->
-  <section id="science" class="card" style="margin-top:22px">
-    <div class="grid grid-2" style="align-items:center">
-      <div>
-        <h2>Історія та наука</h2>
-        <p class="muted">Перші пептидні технології створювалися для космонавтів і військових — щоб зберігати здоров’я у надважких умовах. Сьогодні ці рішення доступні кожному: контроль чистоти, чіткі протоколи, безпечні дозування.</p>
-        <ul class="bullets">
-          <li>Контроль якості інгредієнтів, дослідницькі стандарти.</li>
-          <li>Фокус на клітинній регенерації і системному відновленні.</li>
-        </ul>
-      </div>
-      <div class="imgbox">
-        <img src="nitro_sticks.jpg" alt="NUEVA Nitro — приклад сучасної формули" loading="lazy">
-      </div>
+  <section id="science" class="row grid-2" style="margin-top:22px">
+    <div class="panel">
+      <h2 class="h2">Історія та наука</h2>
+      <p>
+        Перші пептидні технології створювалися для <b>космонавтів</b> і <b>військових</b> — щоб зберігати здоров’я у надважких умовах.
+        Сьогодні ці рішення доступні кожному: контроль чистоти, чіткі протоколи, безпечні дозування.
+      </p>
+      <ul class="list">
+        <li>Контроль якості інгредієнтів, дослідницькі стандарти.</li>
+        <li>Фокус на клітинній регенерації й системному відновленні.</li>
+      </ul>
+    </div>
+    <div class="panel"><img src="nitro_sticks.jpg" alt="Peptide science" /></div>
+  </section>
+
+  <!-- ДЛЯ КОГО -->
+  <section id="audience" class="panel" style="margin-top:22px">
+    <h2 class="h2">Для кого</h2>
+    <div>
+      <span class="tag">Жінки 25–80 (шкіра, волосся, баланс)</span>
+      <span class="tag">Спортсменам 20–60 (витривалість)</span>
+      <span class="tag">Ті, хто дбає про довголіття й здоров’я</span>
     </div>
   </section>
 
   <!-- ПРОДУКТИ -->
-  <section id="products" style="margin-top:22px">
-    <h2>Наші продукти</h2>
-    <div class="grid grid-4">
-      <div class="card">
-        <div class="imgbox"><img src="beauty.jpg" alt="Nueva Beauty" loading="lazy"></div>
-        <h3 style="margin:12px 0 6px">Nueva Beauty</h3>
-        <p class="muted">Пептиди для шкіри, волосся й нігтів. Клітинна регенерація і сяйво.</p>
-        <div><a class="btn primary" href="product-beauty.html">Детальні інструкції</a></div>
-      </div>
-      <div class="card">
-        <div class="imgbox"><img src="body.jpg" alt="Nueva Body" loading="lazy"></div>
-        <h3 style="margin:12px 0 6px">Nueva Body</h3>
-        <p class="muted">5-amino-1MQ + SLU-PP-332. Метаболічний «ресет», стабільна енергія.</p>
-        <div><a class="btn primary" href="product-body.html">Детальні інструкції</a></div>
-      </div>
-      <div class="card">
-        <div class="imgbox"><img src="nitro_sticks.jpg" alt="Nueva Nitro" loading="lazy"></div>
-        <h3 style="margin:12px 0 6px">Nueva Nitro</h3>
-        <p class="muted">Оксид азоту: кровообіг, витривалість і ясність.</p>
-        <div><a class="btn primary" href="product-nitro.html">Детальні інструкції</a></div>
-      </div>
-      <div class="card">
-        <div class="imgbox"><img src="snow_collagen.jpg" alt="Snow Collagen" loading="lazy"></div>
-        <h3 style="margin:12px 0 6px">Snow Collagen</h3>
-        <p class="muted">Водорозчинний колаген для шкіри, суглобів і відновлення.</p>
-        <div><a class="btn primary" href="product-collagen.html">Детальні інструкції</a></div>
-      </div>
+  <section id="products" class="panel" style="margin-top:22px">
+    <h2 class="h2">Наші продукти</h2>
+    <div class="row grid-4">
+      <a class="card" href="product-beauty.html">
+        <img src="beauty.jpg" alt="Nueva Beauty" />
+        <h3>Beauty — нічне відновлення</h3>
+        <p class="lead">BPC-157 • GHK-Cu • KPV</p>
+      </a>
+      <a class="card" href="product-body.html">
+        <img src="body.jpg" alt="Nueva Body" />
+        <h3>Body — клітинний «ресет»</h3>
+        <p class="lead">5-Amino-1MQ • SLU-PP-332</p>
+      </a>
+      <a class="card" href="product-nitro.html">
+        <img src="nitro_sticks.jpg" alt="Nueva Nitro" />
+        <h3>Nitro — кисень і кровообіг</h3>
+        <p class="lead">H₂ + NO</p>
+      </a>
+      <a class="card" href="product-collagen.html">
+        <img src="snow_collagen.jpg" alt="Snow Collagen" />
+        <h3>Snow Collagen — шкіра й суглоби</h3>
+        <p class="lead">II тип колагену + тремела</p>
+      </a>
     </div>
   </section>
 
   <!-- ВІДГУКИ -->
-  <section id="reviews" class="card" style="margin-top:22px">
-    <h2>Відгуки</h2>
-    <div class="grid grid-3">
-      <div class="card review">
-        <div class="stars">★★★★★</div>
-        <p class="muted">«Після <strong>Nitro</strong> перестала “падати” енергія після обіду, тримаю темп без зайвої кави.»</p>
-        <p><strong>Ірина, 34</strong> — офіс + біг</p>
+  <section id="reviews" class="panel" style="margin-top:22px">
+    <h2 class="h2">Відгуки</h2>
+    <div class="row grid-3">
+      <div class="card">
+        <p>«Після Nitro перестала “падати” енергія після обіду, тримаю темп без зайвої кави.»</p>
+        <p class="lead">Ірина, 34 — офіс + біг</p>
       </div>
-      <div class="card review">
-        <div class="stars">★★★★★</div>
-        <p class="muted">«<strong>Body</strong> дає рівну силу на тренуванні, відновлення швидше, фокус спокійний.»</p>
-        <p><strong>Олег, 42</strong> — тренер</p>
+      <div class="card">
+        <p>«Body дає рівну силу на тренуваннях, відновлення швидше, фокус спокійніший.»</p>
+        <p class="lead">Олег, 42 — тренер</p>
       </div>
-      <div class="card review">
-        <div class="stars">★★★★★</div>
-        <p class="muted">«Комбо <strong>Beauty</strong> + <strong>Snow Collagen</strong>: шкіра щільніша, коліна не “скриплять”.»</p>
-        <p><strong>Марія, 57</strong></p>
+      <div class="card">
+        <p>«Beauty + Snow Collagen: шкіра щільніша, коліна не “скриплять”.»</p>
+        <p class="lead">Марія, 57</p>
       </div>
     </div>
-    <p class="note" style="margin-top:10px">Відгуки — особистий досвід; результати індивідуальні і не є медичною порадою.</p>
+    <p class="notice">Відгуки — особистий досвід; результати індивідуальні і не є медичною порадою.</p>
   </section>
 
-  <!-- ПЕРЕД/ПІСЛЯ -->
-  <section id="beforeafter" class="card" style="margin-top:22px">
-    <h2>Перед / Після</h2>
-    <p class="note">Фото надані клієнтами, публікуються зі згоди. Результати індивідуальні.</p>
-    <div class="ba">
-      <div class="pair">
-        <figure>
-          <img src="ba1_before.jpg" alt="Перед — кейс 1">
-          <figcaption>Кейс 1 — До</figcaption>
-        </figure>
-        <figure>
-          <img src="ba1_after.jpg" alt="Після — кейс 1">
-          <figcaption>Кейс 1 — Після (8 тижнів)</figcaption>
-        </figure>
-      </div>
-      <div class="pair">
-        <figure>
-          <img src="ba2_before.jpg" alt="Перед — кейс 2">
-          <figcaption>Кейс 2 — До</figcaption>
-        </figure>
-        <figure>
-          <img src="ba2_after.jpg" alt="Після — кейс 2">
-          <figcaption>Кейс 2 — Після (6 тижнів)</figcaption>
-        </figure>
-      </div>
-      <div class="pair">
-        <figure>
-          <img src="ba3_before.jpg" alt="Перед — кейс 3">
-          <figcaption>Кейс 3 — До</figcaption>
-        </figure>
-        <figure>
-          <img src="ba3_after.jpg" alt="Після — кейс 3">
-          <figcaption>Кейс 3 — Після (12 тижнів)</figcaption>
-        </figure>
-      </div>
+  <!-- ПЕРЕД / ПІСЛЯ -->
+  <section id="before-after" class="panel" style="margin-top:22px">
+    <h2 class="h2">Перед / Після</h2>
+    <div class="row grid-3">
+      <div class="card"><div class="placeholder"></div><p>Кейс 1 — шкіра (12 тижнів)</p></div>
+      <div class="card"><div class="placeholder"></div><p>Кейс 2 — витривалість (10 тижнів)</p></div>
+      <div class="card"><div class="placeholder"></div><p>Кейс 3 — суглоби (12 тижнів)</p></div>
     </div>
   </section>
 
-  <!-- ЦІНИ -->
-  <section id="prices" class="card" style="margin-top:22px">
-    <div class="bar" style="gap:10px;flex-wrap:wrap">
-      <h2 style="margin:0">Ціни</h2>
-      <button id="uahBtn" class="btn" type="button" style="background:#0a1626;border:1px solid var(--line);color:#cfe2f6">Показати в гривнях (курс ПриватБанк)</button>
-      <span id="rateNote" class="note"></span>
+  <!-- ПРОТОКОЛ #NUEVA -->
+  <section id="protocol" class="panel" style="margin-top:22px">
+    <h2 class="h2">Протокол #nueva для максимальної продуктивності</h2>
+    <p class="lead">Схема допоможе отримати максимум користі. Не є універсальною — почніть з того, що маєте, знайдіть свій ритм і будьте послідовні.</p>
+
+    <div class="card">
+      <h3>1. Почни день з <b>nueva #nitro</b></h3>
+      <p><b>Як приймати:</b></p>
+      <ul class="list">
+        <li>Розчинити 1 саше у 350 мл води кімнатної температури без газу.</li>
+        <li>Легенько струсити, залишити на 5 хв для активації.</li>
+        <li>Випити натще. Рекомендація: зачекати ~30 хв перед їжею чи напоями.</li>
+      </ul>
+      <p><b>Чому:</b> молекулярний водень + оксид азоту підтримують природну енергію, покращують насичення киснем і кровообіг, допомагають залишатися в тонусі протягом дня.*</p>
     </div>
-    <div class="prices" style="margin-top:10px">
-      <table>
-        <thead><tr><th>Продукт</th><th>USD</th><th>UAH*</th></tr></thead>
-        <tbody>
-          <tr><td>Nueva Nitro</td><td data-usd="56">$56</td><td class="uah">—</td></tr>
-          <tr><td>Snow Collagen</td><td data-usd="102">$102</td><td class="uah">—</td></tr>
-          <tr><td>Nueva Beauty</td><td data-usd="233">$233</td><td class="uah">—</td></tr>
-          <tr><td>Nueva Body</td><td data-usd="213">$213</td><td class="uah">—</td></tr>
-        </tbody>
-      </table>
-      <p class="note">*Конвертація орієнтовна. Фактична оплата — за курсом на момент замовлення.</p>
-      <p class="note">Одна таблетка пептидів часто замінює 8–10 «звичайних» добавок — розумніше й економніше.</p>
+
+    <div class="card">
+      <h3>2. Прийми <b>nueva #body</b></h3>
+      <p><b>Як приймати:</b></p>
+      <ul class="list">
+        <li>1 таблетка приблизно за 30 хв до першої їжі або кави (можна з Nitro або окремо).</li>
+        <li>Найкраще — у стані голодування, при низькому рівні інсуліну.</li>
+        <li>Цикл: 2 місяці прийому, 1 місяць перерви.</li>
+      </ul>
+      <p><b>Чому:</b> SLU-PP-332 + 5-Amino-1MQ підтримують енергію, покращують загальне самопочуття й допомагають у цілях зі зміни складу тіла.*</p>
     </div>
-    <div style="display:flex;gap:12px;flex-wrap:wrap">
-      <a class="btn primary" href="#contact">Потрібна допомога з замовленням</a>
-      <a class="btn ok" href="#delivery">Як доставляємо в Україну</a>
+
+    <div class="card">
+      <h3>3. Додай <b>nueva #snowcollagen</b></h3>
+      <p><b>Як приймати:</b></p>
+      <ul class="list">
+        <li>Додати у теплий напій (кава, чай, лимонна вода) або смузі.</li>
+        <li>Приймати під час чи після першої їжі (оптимально вранці). Можна вдень або ввечері.</li>
+      </ul>
+      <p><b>Чому:</b> колаген II типу + тремела підтримують зволоження, зовнішній вигляд шкіри й здоров’я суглобів.*</p>
     </div>
+
+    <div class="card">
+      <h3>4. Завершуй день з <b>nueva #beauty</b></h3>
+      <p><b>Як приймати:</b> натще перед вечерею або безпосередньо перед сном. Нічний прийом підтримує природні процеси відновлення під час сну.</p>
+      <p><b>Чому:</b> BPC-157 + GHK-Cu + KPV сприяють відновленню, роблять шкіру пружнішою, підтримують здоров’я волосся і баланс «кишечник ↔ шкіра».*</p>
+    </div>
+
+    <p class="notice">*Не є медичною рекомендацією. За хронічних станів консультуйтеся з лікарем.</p>
   </section>
 
   <!-- ДОСТАВКА -->
-  <section id="delivery" class="card" style="margin-top:22px">
-    <h2>Доставка в Україну</h2>
-    <p class="muted">Оформлення на сайті виробника. Доставляємо <strong>Meest</strong>, <strong>Нова Пошта Global</strong>, <strong>USPS → Укрпошта</strong>. Допомагаю з оформленням, відстеженням і супроводом українською.</p>
+  <section id="delivery" class="panel" style="margin-top:22px">
+    <h2 class="h2">Доставка в Україну</h2>
+    <p>Замовлення оформлюється на сайті виробника. Доставка: Meest, Нова Пошта Global, USPS→Укрпошта. Я допоможу з оформленням і супроводом.</p>
   </section>
 
   <!-- КОНТАКТИ -->
-  <section id="contact" class="card" style="margin-top:22px">
-    <div class="grid grid-2">
-      <div>
-        <h2>Контакти</h2>
-        <p class="muted">Підберу формулу під ваші цілі і поясню, як замовити.</p>
-        <p><strong>Телефон:</strong> <a href="tel:+380503709687">+380&nbsp;50&nbsp;370&nbsp;9687</a> (Олександр)</p>
-        <p><strong>Telegram:</strong> <a href="https://t.me/+ir3g8RhuXdRmYzAy" target="_blank" rel="noopener">Nueva | Старт можливостей 🌀</a></p>
-      </div>
-      <div class="card" style="background:#0b1624">
-        <h3 style="margin-top:0">Чому ціна логічна</h3>
-        <p class="muted" style="margin:0">Якість пептидів = чистота, стабільність, контроль дозування. Одна таблетка часто замінює 8–10 окремих «вітамінів».</p>
-      </div>
-    </div>
+  <section id="contact" class="panel" style="margin-top:22px">
+    <h2 class="h2">Контакти</h2>
+    <p>
+      Telegram: <a href="https://t.me/+ir3g8RhuXdRmYzAy" target="_blank" rel="noopener">Nueva | Старт можливостей</a><br/>
+      Телефон: <a href="tel:+380503709687">+380&nbsp;50&nbsp;370&nbsp;9687</a> — Партнер: Олександр
+    </p>
   </section>
 
-  <footer class="wrap">
-    <p class="note">© NUEVA. Інформація ознайомча і не є медичною порадою.</p>
+  <footer class="container footer" style="padding-top:6px;padding-bottom:28px">
+    © 2025 NUEVA • Інформація має ознайомчий характер і не замінює консультацію лікаря.
   </footer>
 
 </main>
-
-<script>
-  // Плавна прокрутка
-  document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',e=>{
-    const id=link.getAttribute('href').slice(1), el=document.getElementById(id);
-    if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}) }
-  }));
-
-  // USD -> UAH (курс ПриватБанк)
-  const btn=document.getElementById('uahBtn'), note=document.getElementById('rateNote');
-  btn?.addEventListener('click', async ()=>{
-    btn.disabled=true; btn.textContent='Оновлюю курс...';
-    try{
-      const res=await fetch('https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=5');
-      const data=await res.json();
-      const usd=data.find(x=>/usd/i.test(x.ccy||'')); const rate=parseFloat(usd?.sale||usd?.buy||0);
-      if(!rate) throw 0;
-      document.querySelectorAll('td[data-usd]').forEach(td=>{
-        const uah=td.parentElement.querySelector('.uah'); const val=parseFloat(td.getAttribute('data-usd'));
-        uah.textContent=Math.round(val*rate).toLocaleString('uk-UA')+' ₴';
-      });
-      note.textContent='Курс ПриватБанк: ~ '+rate.toFixed(2)+' ₴ / $1';
-      btn.textContent='Оновити курс';
-    }catch(_){
-      document.querySelectorAll('.uah').forEach(td=>td.textContent='Очікується…');
-      note.textContent='Не вдалося отримати курс. Залишаємо USD.'; btn.textContent='Спробувати ще раз';
-    }finally{ btn.disabled=false }
-  });
-</script>
-
 </body>
 </html>
-
 
