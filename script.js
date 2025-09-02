@@ -1,28 +1,44 @@
-// Конвертація USD → UAH (ПриватБанк). Акуратно з CORS; є фолбек.
-async function usdToUah(){
-  try{
-    const res = await fetch('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5');
-    const data = await res.json();
-    const usd = data.find(r => r.ccy === 'USD');
-    return parseFloat(usd.sale);
-  }catch(e){
-    console.warn('Курс не отримано, фолбек 41.0', e);
-    return 41.0; // фолбек
+// Кнопки на сторінці Ціни: прорахунок у гривнях за курсом ПриватБанку
+(async function () {
+  const calcBtn = document.getElementById('calcUAH');
+  const clearBtn = document.getElementById('clearUAH');
+  if (!calcBtn) return;
+
+  const reserveRate = 40.0; // резервний курс, якщо банк не відповідає
+  let currentRate = null;
+
+  async function getPrivatRate() {
+    try {
+      const res = await fetch('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5', { cache: 'no-store' });
+      const data = await res.json();
+      const usd = Array.isArray(data) ? data.find(x => (x.ccy === 'USD' || x.ccy === 'usd')) : null;
+      const rate = usd && (usd.sale || usd.buy || usd.rate);
+      return rate ? parseFloat(rate) : null;
+    } catch (e) {
+      return null;
+    }
   }
-}
 
-async function convertPrices(){
-  const rate = await usdToUah();
-  document.querySelectorAll('[data-price-usd]').forEach(el=>{
-    const usd = parseFloat(el.dataset.priceUsd);
-    const uah = Math.round(usd * rate).toLocaleString('uk-UA');
-    el.innerText = `${uah} ₴`;
+  function renderUAH(rate) {
+    document.querySelectorAll('[data-usd]').forEach(el => {
+      const usd = parseFloat(el.getAttribute('data-usd'));
+      const uah = Math.round(usd * rate);
+      const holder = el.parentElement.querySelector('.uah');
+      if (holder) holder.textContent = `≈ ${uah.toLocaleString('uk-UA')} грн`;
+    });
+  }
+
+  function clearUAH() {
+    document.querySelectorAll('.uah').forEach(el => el.textContent = '');
+  }
+
+  calcBtn.addEventListener('click', async () => {
+    if (!currentRate) {
+      currentRate = await getPrivatRate();
+      if (!currentRate) currentRate = reserveRate;
+    }
+    renderUAH(currentRate);
   });
-  const rateBox = document.getElementById('rateNote');
-  if(rateBox) rateBox.textContent = `Курс ПриватБанку ~ ${rate.toFixed(2)} UAH за 1 USD`;
-}
 
-window.addEventListener('DOMContentLoaded',()=>{
-  const btn = document.getElementById('uahBtn');
-  if(btn){ btn.addEventListener('click', convertPrices); }
-});
+  clearBtn.addEventListener('click', clearUAH);
+})();
