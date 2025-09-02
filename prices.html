@@ -1,50 +1,49 @@
 <!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NUEVA — ціни</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>
-  <div class="container navbar">
-    <div class="brand">NUEVA</div>
-    <div class="menu">
-      <a href="index.html">На головну</a>
-      <a href="product-beauty.html">Beauty</a>
-      <a href="product-body.html">Body</a>
-      <a href="product-nitro.html">Nitro</a>
-      <a href="product-collagen.html">Snow Collagen</a>
-    </div>
+<header class="nav">
+  <div class="wrap navbar">
+    <a class="brand" href="index.html">NUEVA</a>
+    <nav class="menu">
+      <a href="index.html#why">Про пептиди</a>
+      <a href="index.html#history">Історія</a>
+      <a href="index.html#nueva">Про NUEVA</a>
+      <a href="prices.html" class="active">Ціни</a>
+      <a href="index.html#contact">Контакти</a>
+    </nav>
   </div>
-</nav>
+</header>
 
-<div class="container panel">
-  <h1 class="h1">Ціни</h1>
-  <p class="lead">Конвертація орієнтовна, фактична оплата — за курсом на момент замовлення.</p>
+<main class="wrap">
+  <section class="card pad">
+    <h1 class="h1">Ціни</h1>
+    <p class="lead">USD → можна порахувати у гривнях за курсом ПриватБанку.</p>
 
-  <button id="uahBtn" class="btn small" type="button">Показати в гривнях (курс ПриватБанку)</button>
-  <p id="rateNote" class="notice" style="margin-top:8px"></p>
+    <div class="price-grid">
+      <div class="pitem"><span>Nueva Nitro</span><b data-usd="56">$56</b><em class="uah"></em></div>
+      <div class="pitem"><span>Snow Collagen</span><b data-usd="102">$102</b><em class="uah"></em></div>
+      <div class="pitem"><span>Nueva Beauty</span><b data-usd="233">$233</b><em class="uah"></em></div>
+      <div class="pitem"><span>Nueva Body</span><b data-usd="213">$213</b><em class="uah"></em></div>
+    </div>
 
-  <table class="table" style="margin-top:14px">
-    <thead>
-      <tr><th>Продукт</th><th>USD</th><th>UAH*</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Nueva Nitro</td><td>$56</td><td data-price-usd="56">—</td></tr>
-      <tr><td>Snow Collagen</td><td>$102</td><td data-price-usd="102">—</td></tr>
-      <tr><td>Nueva Beauty</td><td>$233</td><td data-price-usd="233">—</td></tr>
-      <tr><td>Nueva Body</td><td>$213</td><td data-price-usd="213">—</td></tr>
-    </tbody>
-  </table>
+    <div class="cta-row">
+      <button class="btn" id="calcUAH">Показати в гривнях</button>
+      <button class="btn ghost" id="clearUAH">Сховати гривні</button>
+    </div>
 
-  <p class="notice">Одна таблетка/стик часто «закриває» 8–10 вітамінів — розумніше й економніше.</p>
-</div>
+    <p class="note">Якщо банк тимчасово не відповідає, розрахунок виконується за резервним курсом.</p>
+    <p class="lead">Потрібна консультація чи допомога з оформленням доставки? — <a href="https://t.me/+ir3g8RhuXdRmYzAy" target="_blank">Telegram</a> або <a href="tel:+380503709687">+380 50 370 9687</a>.</p>
+  </section>
+</main>
 
-<footer class="container footer" style="padding-bottom:28px">
-  <a href="index.html">← Назад на головну</a>
-</footer>
+<footer class="wrap footer">© NUEVA. Твій старт можливостей.</footer>
+<script src="script.js"></script>
 </body>
 </html>
+
