@@ -1,58 +1,40 @@
 <!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Ціни — NUEVA</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="nav">
-  <div class="wrap nav__inner">
-    <a class="logo" href="index.html">NUEVA</a>
-    <nav class="menu">
-      <a href="index.html#products">Продукти</a>
-      <a href="index.html#contacts">Контакти</a>
-    </nav>
-  </div>
-</header>
+  <div class="nav"><div class="wrap" style="display:flex;justify-content:space-between;align-items:center">
+    <div class="brand">NUEVA</div>
+    <div class="menu"><a href="index.html">На головну</a></div>
+  </div></div>
 
-<main class="wrap">
-  <section class="card">
-    <h1>Ціни</h1>
-    <p class="muted">*Конвертація орієнтовна. Фактична оплата — за курсом на момент замовлення. Натисни «Показати в гривнях», щоб перерахувати.</p>
-
-    <div class="toolbar">
-      <label class="rate">
-        Курс (USD → UAH):
-        <input id="rate" type="number" step="0.1" value="41.0" />
-      </label>
-      <button class="btn" id="toUAH">Показати в гривнях</button>
-      <button class="btn" id="toUSD">Повернути USD</button>
+  <main class="wrap section">
+    <div class="card">
+      <h1>Ціни (USD)</h1>
+      <p class="note">Оплата відбувається в доларах США за курсом банку на момент замовлення.</p>
+      <div class="card" style="margin-top:14px">
+        <div class="grid grid-2 equal">
+          <div><b>Nueva Nitro</b></div><div>$56</div>
+          <div><b>Snow Collagen</b></div><div>$102</div>
+          <div><b>Nueva Beauty</b></div><div>$233</div>
+          <div><b>Nueva Body</b></div><div>$213</div>
+        </div>
+      </div>
+      <p class="note" style="margin-top:12px">Одна «таблетка» пептидних формул часто замінює 8–10 звичних добавок.</p>
+      <div class="chips" style="margin-top:12px">
+        <a class="btn" href="product-body.html">Body</a>
+        <a class="btn" href="product-nitro.html">Nitro</a>
+        <a class="btn" href="product-collagen.html">Snow Collagen</a>
+        <a class="btn" href="product-beauty.html">Beauty</a>
+      </div>
     </div>
-
-    <table class="price">
-      <thead><tr><th>Продукт</th><th class="num">USD</th><th class="num">UAH*</th></tr></thead>
-      <tbody>
-        <tr><td>Nueva Nitro</td><td class="num price-usd" data-usd="56">$56</td><td class="num price-uah">—</td></tr>
-        <tr><td>Snow Collagen</td><td class="num price-usd" data-usd="102">$102</td><td class="num price-uah">—</td></tr>
-        <tr><td>Nueva Beauty</td><td class="num price-usd" data-usd="233">$233</td><td class="num price-uah">—</td></tr>
-        <tr><td>Nueva Body</td><td class="num price-usd" data-usd="213">$213</td><td class="num price-uah">—</td></tr>
-      </tbody>
-    </table>
-
-    <div class="mt-16">
-      <a class="btn btn-primary" href="index.html#products">Повернутися до продуктів</a>
-      <a class="btn" href="https://t.me/+380503709687" target="_blank" rel="noopener">Потрібна допомога з замовленням</a>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="wrap">© NUEVA. Партнер: Олександр.</div>
-</footer>
+  </main>
 </body>
 </html>
+
 
 
