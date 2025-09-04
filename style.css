@@ -68,4 +68,20 @@ img{max-width:100%; display:block; border-radius:14px}
   display: block;
   border-radius: 14px;
 }
+/* HERO */
+.hero .grid.two { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 18px; 
+}
+
+.hero .hero-img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+}
+@media (max-width: 900px){
+  .hero .grid.two { grid-template-columns: 1fr; }
+}
 
