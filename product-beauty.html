@@ -1,60 +1,61 @@
 <!doctype html>
-<html lang="ук">
+<html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nueva Beauty — нічне відновлення, шкіра і волосся</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nueva Beauty — нічне відновлення, шкіра й волосся</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="nav">
-  <div class="wrap nav__inner">
-    <a class="logo" href="index.html">NUEVA</a>
-    <nav class="menu small">
-      <a href="product-beauty.html" class="active">Beauty</a>
-      <a href="product-body.html">Body</a>
-      <a href="product-nitro.html">Nitro</a>
-      <a href="product-collagen.html">Snow Collagen</a>
-      <a href="prices.html">Ціни</a>
-    </nav>
-  </div>
-</header>
+<div class="nav"><div class="wrap" style="display:flex;justify-content:space-between;align-items:center">
+  <div class="brand">NUEVA</div>
+  <nav class="menu">
+    <a href="product-beauty.html">Beauty</a>
+    <a href="product-body.html">Body</a>
+    <a href="product-nitro.html">Nitro</a>
+    <a href="product-collagen.html">Snow Collagen</a>
+    <a href="prices.html">Ціни</a>
+  </nav>
+</div></div>
 
-<main class="wrap twocol">
-  <section class="card">
-    <h1>Nueva Beauty — нічне відновлення, шкіра і волосся</h1>
+<main class="wrap section">
+  <div class="product-grid">
+    <div class="card">
+      <h1>Nueva Beauty — нічне відновлення, шкіра і волосся</h1>
+      <div class="chips" style="margin:6px 0 10px">
+        <span class="badge price-pill">$233</span>
+        <button class="btn secondary" data-toggle-price>Показати ціну</button>
+        <a class="btn secondary" href="prices.html">Усі ціни</a>
+        <a class="btn" href="https://t.me/+380503709687" target="_blank" rel="noopener">Консультація в Telegram</a>
+      </div>
 
-    <div class="price-actions">
-      <button class="btn" data-price="$233">Показати ціну</button>
-      <a class="btn" href="prices.html">Усі ціни</a>
-      <a class="btn btn-primary" href="https://t.me/+380503709687" target="_blank" rel="noopener">Консультація в Telegram</a>
+      <h2>Як приймати</h2>
+      <ul class="lead">
+        <li>Натще перед вечерею або безпосередньо перед сном.</li>
+        <li>Нічний прийом підтримує природні процеси відновлення.</li>
+      </ul>
+
+      <h2>Поради</h2>
+      <ul class="lead">
+        <li>Поєднуйте з <b>Snow Collagen</b> для щоденної підтримки шкіри.</li>
+        <li>Вода + повноцінний білок у раціоні підсилюють ефект.</li>
+      </ul>
+
+      <h2>Застереження</h2>
+      <ul class="lead">
+        <li>Не для вагітних/годуючих.</li>
+        <li>За хронічних станів — консультуйтеся з лікарем.</li>
+        <li>Не перевищуйте рекомендовану дозу.</li>
+      </ul>
+      <p class="note">Інформація має ознайомчий характер і не є медичною рекомендацією.</p>
     </div>
 
-    <h3>Як приймати</h3>
-    <ul class="list">
-      <li>Натще перед вечерею або безпосередньо перед сном.</li>
-      <li>Нічний прийом підтримує природні процеси відновлення.</li>
-      <li>Комбінуйте зі <b>Snow Collagen</b> для щоденної підтримки шкіри.</li>
-    </ul>
-
-    <h3>Застереження</h3>
-    <ul class="list">
-      <li>Перевіряйте індивідуальну переносимість.</li>
-      <li>Не перевищуйте рекомендовану дозу.</li>
-    </ul>
-
-    <p class="disclaimer">Інформація має ознайомчий характер і не є медичною рекомендацією.</p>
-  </section>
-
-  <aside class="card product__img">
-    <img src="beauty.jpg" alt="Nueva Beauty" />
-  </aside>
+    <div class="card" style="display:grid;place-items:center">
+      <img class="fit" src="beauty.jpg" alt="Nueva Beauty">
+    </div>
+  </div>
 </main>
-
-<footer class="footer">
-  <div class="wrap">© NUEVA. Партнер: Олександр.</div>
-</footer>
+<script src="script.js"></script>
 </body>
 </html>
 
