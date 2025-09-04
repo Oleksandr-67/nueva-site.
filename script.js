@@ -42,3 +42,8 @@
 
   clearBtn.addEventListener('click', clearUAH);
 })();
+/* reveal price on click */
+function revealPrice(btn){
+  const price = btn.getAttribute('data-price') || '';
+  btn.outerHTML = `<span class="price-tag">${price} <small>≈ за курсом ПриватБанку</small></span>`;
+}
