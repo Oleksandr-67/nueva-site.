@@ -3,49 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NUEVA — пептиди, енергія, відновлення та довголіття</title>
-  <meta name="description" content="Пептиди Nueva: SLU-PP-332, 5-Amino-1MQ, Nitro (H₂+NO), Snow Collagen. Більше енергії, фокус без «провалів» від кави, відновлення шкіри та суглобів. Історія, наука та чесні протоколи." />
-  <link rel="stylesheet" href="style.css" />
+  <title>NUEVA — пептиди, енергія, відновлення</title>
+  <meta name="description" content="Пептиди NUEVA: SLU-PP-332, 5-Amino-1MQ, Nitro (H₂+NO). Науковий підхід до енергії, фокусу та відновлення. Історія, інструкції прийому, доставка в Україну." />
   <link rel="preload" as="image" href="peptides_hero.jpg" />
-  <style>
-    /* Лише мінімальні доправки, щоб точно прибрати «залипший» текст і гарно показати геро */
-    .hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center}
-    .hero-img{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 8px 24px rgba(0,0,0,.25)}
-    .hero-img img{display:block;width:100%;height:100%;object-fit:cover}
-    @media (max-width: 920px){.hero-grid{grid-template-columns:1fr;}}
-    /* картки */
-    .panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px}
-    .accent{background:rgba(255,217,0,.12);border-color:rgba(255,217,0,.35)}
-    .h1{font-size:36px;line-height:1.2;margin:0 0 12px}
-    .lead{opacity:.9;margin:6px 0}
-    .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
-    .btn{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.18)}
-    .btn-primary{background:#19b6ff;border-color:#19b6ff;color:#002133;font-weight:700}
-    .btn-ghost{background:transparent}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-    .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
-    @media (max-width: 920px){.grid-2,.grid-3{grid-template-columns:1fr}}
-    .list{margin:8px 0 0 0;padding-left:0;list-style:none}
-    .list li{margin:8px 0;padding-left:22px;position:relative}
-    .list li::before{content:"•";position:absolute;left:0;top:0;color:#19b6ff}
-    .muted{opacity:.75;font-size:14px}
-    header.nav{margin-bottom:18px}
-    header .brand{font-weight:900;letter-spacing:.08em}
-    nav a{margin-left:18px;opacity:.85}
-    .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
-    footer{opacity:.7;margin-top:28px}
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 
-<body class="navy">
+<body>
 <header class="nav">
-  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;padding:14px 0;">
-    <a class="brand" href="index.html" style="text-decoration:none;">NUEVA</a>
-    <nav>
-      <a href="#hero">Про пептиди</a>
-      <a href="#why">Для чого</a>
+  <div class="wrap nav__inner">
+    <a class="logo" href="index.html">NUEVA</a>
+    <nav class="menu">
+      <a href="#about">Про пептиди</a>
+      <a href="#for">Для чого</a>
       <a href="#history">Історія</a>
-      <a href="#about">Про NUEVA</a>
+      <a href="#about-nueva">Про NUEVA</a>
       <a href="#products">Продукти</a>
       <a href="#reviews">Відгуки</a>
       <a href="#contacts">Контакти</a>
@@ -56,38 +29,44 @@
 <main class="wrap">
 
   <!-- HERO -->
-  <section id="hero" class="hero-grid">
-    <div class="panel">
-      <h1 class="h1">Пептиди — майбутнє здоров’я та довголіття</h1>
-      <p class="lead">SLU-PP-332 + 5-Amino-1MQ, і головне — вони працюють разом.</p>
-      <p class="muted">Це не «пептиди заради моди» — це наука, яка дає результати. <strong>Nitro (H₂ + NO) → більше кисню та енергії</strong> — відчутно приблизно за 45 хв.</p>
-      <div class="btns">
+  <section class="hero" id="hero">
+    <div class="hero__left card">
+      <h1>Пептиди — майбутнє здоров’я та довголіття</h1>
+      <p class="muted">SLU-PP-332 + 5-Amino-1MQ, і головне — вони працюють разом.</p>
+      <p class="mt-8">
+        Це не «пептиди заради моди» — це наука, яка дає результати.
+        <b>Nitro (H₂ + NO)</b> → більше кисню та енергії — відчутно приблизно за 45 хв.
+      </p>
+      <div class="hero__cta">
         <a class="btn btn-primary" href="#products">Дивитися продукти</a>
-        <a class="btn btn-ghost" href="#contacts">Консультація</a>
+        <a class="btn" href="https://t.me/+380503709687" target="_blank" rel="noopener">Консультація</a>
       </div>
     </div>
 
-    <div class="hero-img" aria-hidden="true">
-      <picture>
-        <source srcset="peptides_hero.webp" type="image/webp" />
-        <source srcset="peptides_hero2.jpg" media="(max-width: 900px)" />
-        <img src="peptides_hero.jpg" alt="Молекули пептидів / ДНК — науковий візуал" />
-      </picture>
+    <div class="hero__right card">
+      <figure class="hero__img">
+        <img src="peptides_hero.jpg" alt="Молекула пептиду / ДНК — науковий візуал" />
+      </figure>
     </div>
   </section>
-<!-- Наукові візуали -->
-<section id="science-visual" class="grid duo" style="margin-top:16px;">
-  <figure class="card">
-    <img src="сиртуїни.jpg" alt="Сиртуїни — білки молодості" loading="lazy">
-  </figure>
-  <figure class="card">
-    <img src="тіло.jpg" alt="Клітини та мітохондрії — «електростанції»" loading="lazy">
-  </figure>
-</section>
 
-  <!-- ЩО РОБЛЯТЬ + ДЛЯ ЧОГО -->
-  <section id="why" style="margin-top:22px" class="grid-2">
-    <div class="panel">
+  <!-- Наукові ілюстрації (опційний блок під героєм) -->
+  <section class="scicards">
+    <div class="scicards__grid">
+      <div class="card scicard">
+        <div class="scicard__title">Сиртуїни — «білки молодості»</div>
+        <p class="muted">Їх активація = омолодження клітини, захист ДНК та відновлення.</p>
+      </div>
+      <div class="card scicard">
+        <div class="scicard__title">Клітини та мітохондрії — «електростанції»</div>
+        <p class="muted">Більше кисню → стабільна енергія без «провалів» від кави.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Що роблять пептиди / Для чого -->
+  <section class="twocol" id="about">
+    <div class="card">
       <h2>Що роблять пептиди</h2>
       <ul class="list">
         <li>Передають сигнали клітинам для відновлення.</li>
@@ -95,101 +74,96 @@
         <li>Захищають від стресу та запалення.</li>
       </ul>
     </div>
-    <div class="panel">
+    <div class="card" id="for">
       <h2>Пептиди потрібні для…</h2>
       <ul class="list">
-        <li><strong>Мозку</strong> — концентрація та пам’ять.</li>
-        <li><strong>Серця</strong> — стабільна клітинна енергія.</li>
-        <li><strong>М’язів</strong> — витривалість і відновлення після навантажень.</li>
-        <li><strong>Шкіри</strong> — пружність, зволоження та природне сяйво.</li>
+        <li><b>Мозку</b> — концентрація та пам’ять.</li>
+        <li><b>Серця</b> — стабільна клітинна енергія.</li>
+        <li><b>М’язів</b> — витривалість і відновлення після навантажень.</li>
+        <li><b>Шкіри</b> — пружність, зволоження та природне сяйво.</li>
       </ul>
     </div>
   </section>
 
-  <!-- ІСТОРІЯ + NUEVA -->
-  <section id="history" style="margin-top:22px" class="grid-2">
-    <div class="panel accent">
+  <!-- Історія та наука / Про NUEVA -->
+  <section class="twocol" id="history">
+    <div class="card">
       <h2>Перші пептиди — для космонавтів і військових</h2>
-      <p>Пептидні технології створювалися, щоб зберігати здоров’я у надважких умовах.</p>
-      <p><strong>Сьогодні ці технології стали доступні кожному:</strong> контроль чистоти, чіткі протоколи, безпечне застосування.</p>
+      <p>Пептидні технології створювались, щоб зберігати здоров’я у надважких умовах.</p>
+      <p><b>Сьогодні ці технології стали доступні кожному:</b> контроль чистоти, чіткі протоколи, безпечне застосування.</p>
     </div>
-
-    <div id="about" class="panel accent">
+    <div class="card" id="about-nueva">
       <h2>✨ NUEVA — це більше, ніж бренд</h2>
       <p>Це — рух людей, які вирішили жити інакше. Не виживати — а процвітати. Не слідувати трендам — а творити нову епоху.</p>
       <p>Ми створили компанію, що захищає своїх людей — і більше не дозволить, щоб їхнє джерело доходу забрали за одну ніч.</p>
-      <p class="muted"><em>«Саме це й є Nueva.» — Браян Макмаллен, засновник Nueva</em></p>
-      <div class="btns">
-        <a class="btn btn-primary" href="#contacts">Зв’язатися</a>
-        <a class="btn btn-ghost" href="#hero">Повернутися нагору</a>
+      <p class="quote">«Саме це й є Nueva.» — <i>Браян Макмаллен, засновник Nueva</i></p>
+      <div class="hero__cta">
+        <a class="btn btn-primary" href="https://t.me/+380503709687" target="_blank" rel="noopener">Зв’язатися</a>
+        <a class="btn" href="#hero">Повернутися нагору</a>
       </div>
     </div>
   </section>
 
-  <!-- ПРОДУКТИ -->
-  <section id="products" style="margin-top:22px" class="panel">
+  <!-- Продукти -->
+  <section id="products" class="card">
     <h2>Наші продукти</h2>
     <p class="muted">Детальні інструкції, склад і консультація — на сторінках продуктів.</p>
-    <div class="btns" style="margin-top:10px;flex-wrap:wrap">
-      <a class="btn btn-ghost" href="product-body.html">Nueva Body</a>
-      <a class="btn btn-ghost" href="product-nitro.html">Nueva Nitro</a>
-      <a class="btn btn-ghost" href="product-collagen.html">Snow Collagen</a>
-      <a class="btn btn-ghost" href="product-beauty.html">Nueva Beauty</a>
+    <div class="chips">
+      <a class="chip" href="product-body.html">Nueva Body</a>
+      <a class="chip" href="product-nitro.html">Nueva Nitro</a>
+      <a class="chip" href="product-collagen.html">Snow Collagen</a>
+      <a class="chip" href="product-beauty.html">Nueva Beauty</a>
     </div>
   </section>
 
-  <!-- ВІДГУКИ -->
-  <section id="reviews" style="margin-top:22px" class="panel">
+  <!-- Відгуки -->
+  <section id="reviews" class="card">
     <h2>Відгуки</h2>
-    <div class="grid-3">
-      <div class="panel"><p>«Після Nitro тримаю темп без зайвої кави — енергія рівна до вечора.» — <strong>Ірина, 34</strong></p></div>
-      <div class="panel"><p>«Body дає фокус і спокій на тренуваннях, відновлення швидше.» — <strong>Олег, 42</strong></p></div>
-      <div class="panel"><p>«Beauty + Snow: шкіра щільніша, коліна не «скриплять».» — <strong>Марія, 57</strong></p></div>
+    <div class="reviews">
+      <blockquote class="review">«Після Nitro тримаю темп без зайвої кави — енергія рівна до вечора.» — <b>Ірина, 34</b></blockquote>
+      <blockquote class="review">«Body дає фокус і спокій на тренуваннях, відновлення швидше.» — <b>Олег, 42</b></blockquote>
+      <blockquote class="review">«Beauty + Snow: шкіра щільніша, коліна не „скриплять“.» — <b>Марія, 57</b></blockquote>
     </div>
-    <p class="muted">Результати індивідуальні. Це не медична рекомендація.</p>
+    <p class="disclaimer">Результати індивідуальні. Це не медична рекомендація.</p>
   </section>
 
-  <!-- ПЕРЕД/ПІСЛЯ -->
-  <section id="beforeafter" style="margin-top:22px" class="panel">
+  <!-- Перед / Після -->
+  <section class="card">
     <h2>Перед / Після</h2>
-    <div class="grid-3">
-      <div class="panel"><p><strong>Кейс 1</strong> — фото буде додано</p></div>
-      <div class="panel"><p><strong>Кейс 2</strong> — фото буде додано</p></div>
-      <div class="panel"><p><strong>Кейс 3</strong> — фото буде додано</p></div>
+    <div class="beforeafter">
+      <div class="ba">Кейс 1 — фото буде додано</div>
+      <div class="ba">Кейс 2 — фото буде додано</div>
+      <div class="ba">Кейс 3 — фото буде додано</div>
     </div>
   </section>
 
-  <!-- ДОСТАВКА + КОНТАКТИ -->
-  <section id="contacts" style="margin-top:22px" class="grid-2">
-    <div class="panel">
+  <!-- Доставка і контакти -->
+  <section class="twocol">
+    <div class="card">
       <h2>Доставка в Україну</h2>
-      <p>Замовлення оформлюється через сайт виробника. Доставка поштовими сервісами <strong>Meest</strong>, <strong>Нова Пошта Global</strong>, <strong>USPS → Укрпошта</strong>. Я допомагаю з оформленням і супроводом.</p>
+      <p>Замовлення оформлюється через сайт виробника. Доставка поштовими сервісами <b>Meest</b>, <b>Нова Пошта Global</b>, <b>USPS → Укрпошта</b>. Я допомагаю з оформленням і супроводом.</p>
     </div>
-    <div class="panel">
+    <div class="card" id="contacts">
       <h2>Контакти</h2>
-      <div class="btns" style="margin-bottom:8px">
-        <a class="btn btn-primary" href="https://t.me/">Telegram: Nueva | Старт можливостей</a>
-        <a class="btn btn-ghost" href="tel:+380503709687">Телефон: +380 50 370 9687 (Олександр)</a>
-      </div>
-      <p class="muted">Матеріал має ознайомчий характер і не є медичною рекомендацією.</p>
+      <p><a class="chip chip--accent" href="https://t.me/+380503709687" target="_blank" rel="noopener">Telegram: Nueva | Старт можливостей</a></p>
+      <p><a class="chip" href="tel:+380503709687">Телефон: +380 50 370 9687 (Олександр)</a></p>
+      <p class="disclaimer">Матеріал має ознайомчий характер і не є медичною рекомендацією.</p>
     </div>
   </section>
 
-  <!-- ЦІНИ -->
-  <section id="prices" style="margin-top:22px" class="panel">
+  <!-- Кнопка до цін -->
+  <section class="card">
     <h2>Ціни</h2>
-    <p class="muted">Після знайомства з протоколами й продуктами — переходьте до цін.</p>
-    <div class="btns">
-      <a class="btn btn-primary" href="prices.html">Перейти до цін</a>
-    </div>
+    <p>Після знайомства з протоколами і продуктами — переходьте до цін.</p>
+    <a class="btn btn-primary" href="prices.html">Перейти до цін</a>
   </section>
-
-  <footer class="wrap">
-    <p class="muted">© NUEVA. Партнер: Олександр.</p>
-  </footer>
 
 </main>
-<script src="script.js"></script>
+
+<footer class="footer">
+  <div class="wrap">© NUEVA. Партнер: Олександр.</div>
+</footer>
 </body>
 </html>
+
 
