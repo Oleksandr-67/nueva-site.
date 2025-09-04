@@ -1,67 +1,63 @@
 <!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Nueva Body — клітинний «ресет»</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="nav">
-  <div class="wrap nav__inner">
-    <a class="logo" href="index.html">NUEVA</a>
-    <nav class="menu small">
-      <a href="product-beauty.html">Beauty</a>
-      <a href="product-body.html" class="active">Body</a>
-      <a href="product-nitro.html">Nitro</a>
-      <a href="product-collagen.html">Snow Collagen</a>
-      <a href="prices.html">Ціни</a>
-    </nav>
-  </div>
-</header>
+<div class="nav"><div class="wrap" style="display:flex;justify-content:space-between;align-items:center">
+  <div class="brand">NUEVA</div>
+  <nav class="menu">
+    <a href="product-beauty.html">Beauty</a>
+    <a href="product-body.html">Body</a>
+    <a href="product-nitro.html">Nitro</a>
+    <a href="product-collagen.html">Snow Collagen</a>
+    <a href="prices.html">Ціни</a>
+  </nav>
+</div></div>
 
-<main class="wrap twocol">
-  <section class="card">
-    <h1>Nueva Body — клітинний «ресет»</h1>
+<main class="wrap section">
+  <div class="product-grid">
+    <div class="card">
+      <h1>Nueva Body — клітинний «ресет»</h1>
+      <div class="chips" style="margin:6px 0 10px">
+        <span class="badge price-pill">$213</span>
+        <button class="btn secondary" data-toggle-price>Показати ціну</button>
+        <a class="btn secondary" href="prices.html">Усі ціни</a>
+        <a class="btn" href="https://t.me/+380503709687" target="_blank" rel="noopener">Консультація в Telegram</a>
+      </div>
 
-    <div class="price-actions">
-      <button class="btn" data-price="$213">Показати ціну</button>
-      <a class="btn" href="prices.html">Усі ціни</a>
-      <a class="btn btn-primary" href="https://t.me/+380503709687" target="_blank" rel="noopener">Консультація в Telegram</a>
+      <h2>Як приймати</h2>
+      <ul class="lead">
+        <li>1 таблетка приблизно за 30 хв до першої їжі або кави.</li>
+        <li>Можна поєднувати з Nitro або приймати окремо.</li>
+        <li>Найкраще — у стані низького інсуліну.</li>
+        <li>Цикл: 2 місяці прийому → ~1 місяць перерви.</li>
+      </ul>
+
+      <h2>Поради</h2>
+      <ul class="lead">
+        <li>Добре поєднується з <b>Nitro</b> (кровообіг) і <b>Snow Collagen</b> (відновлення тканин).</li>
+        <li>Вода та достатньо білка у раціоні підсилюють ефект.</li>
+      </ul>
+
+      <h2>Застереження</h2>
+      <ul class="lead">
+        <li>Не для вагітних/годуючих.</li>
+        <li>За хронічних станів — консультуйтеся з лікарем.</li>
+        <li>Не перевищуйте рекомендовану дозу.</li>
+      </ul>
+      <p class="note">Інформація має ознайомчий характер і не є медичною рекомендацією.</p>
     </div>
 
-    <h3>Як приймати</h3>
-    <ul class="list">
-      <li>1 таблетка приблизно за 30 хв до першої їжі або кави.</li>
-      <li>Можна поєднувати з Nitro або приймати окремо.</li>
-      <li>Найкраще — у стані низького інсуліну.</li>
-      <li>Цикл: 2 місяці прийому → ~1 місяць перерви.</li>
-    </ul>
-
-    <h3>Поради</h3>
-    <ul class="list">
-      <li>Добре поєднується з <b>Nitro</b> (кровообіг) і <b>Snow Collagen</b> (відновлення тканин).</li>
-      <li>Вода та достатньо білка у раціоні підсилюють ефект.</li>
-    </ul>
-
-    <h3>Застереження</h3>
-    <ul class="list">
-      <li>Не для вагітних/годуючих.</li>
-      <li>За хронічних станів — консультуйтеся з лікарем.</li>
-      <li>Не перевищуйте рекомендовану дозу.</li>
-    </ul>
-
-    <p class="disclaimer">Інформація має ознайомчий характер і не є медичною рекомендацією.</p>
-  </section>
-
-  <aside class="card product__img">
-    <img src="body.jpg" alt="Nueva Body" />
-  </aside>
+    <div class="card" style="display:grid;place-items:center">
+      <img class="fit" src="body.jpg" alt="Nueva Body">
+    </div>
+  </div>
 </main>
-
-<footer class="footer">
-  <div class="wrap">© NUEVA. Партнер: Олександр.</div>
-</footer>
+<script src="script.js"></script>
 </body>
 </html>
+
