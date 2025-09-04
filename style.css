@@ -1,50 +1,100 @@
-/* Сітки */
-.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-.grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
-
-/* Карточки/колірна схема (темний графіт + бірюза) */
+/* ===== БАЗА ===== */
 :root{
-  --bg:#0f172a; --panel:#1e293b; --text:#e2e8f0; --muted:#94a3b8;
-  --accent:#22d3ee; --accent-2:#0ea5b7;
+  --bg:#0e1420;          /* графіт */
+  --bg-2:#121a2b;        /* темніша карта */
+  --panel:#0b1220;       /* панелі */
+  --text:#e6eef8;        /* майже білий */
+  --muted:#9fb0c8;       /* вторинний текст */
+  --accent:#23c8d8;      /* бірюза */
+  --accent-2:#1aa7b5;
+  --ring:rgba(35,200,216,.35);
+  --ok:#8ff0c6;
+  --danger:#f59e9e;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
 }
-body{ background:radial-gradient(1200px 800px at 25% 10%,#0b1224 0,#0f172a 40%,#0f172a 100%); color:var(--text); margin:0; font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial; }
-.wrap{ width:min(1100px, 92%); margin:0 auto; }
-.nav{ position:sticky; top:0; z-index:10; background:#0f172acc; backdrop-filter:saturate(1.2) blur(6px); border-bottom:1px solid #0b1224; }
-.nav .wrap{ display:flex; align-items:center; justify-content:space-between; padding:10px 0; }
-.brand{ color:#7dd3fc; text-decoration:none; font-weight:800; letter-spacing:.6px; }
-.menu a{ color:var(--muted); text-decoration:none; margin:0 10px; }
-.menu a:hover{ color:var(--text); }
 
-.card{ background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); border:1px solid #233044; border-radius:16px; padding:18px 16px; }
-.card.accent{ background:linear-gradient(180deg, rgba(34,211,238,.07), rgba(255,255,255,.01)); border-color:#235368; }
-
-.hero .card:first-child h1{ margin-top:0; }
-.row{ display:flex; gap:12px; flex-wrap:wrap; }
-.btn{ background:var(--accent); color:#05313a; padding:10px 14px; border-radius:14px; text-decoration:none; font-weight:700; }
-.btn.ghost{ background:transparent; color:var(--accent); border:1px solid var(--accent-2); }
-.chip-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;}
-.chip{ padding:8px 12px; border-radius:999px; border:1px solid #33516a; text-decoration:none; color:var(--text); }
-.chip.ghost{ background:transparent; color:#9bdaf0; border-color:#3d6c83; }
-
-.list{ margin:10px 0 0 0; padding:0 0 0 18px; }
-.muted{ color:var(--muted); }
-.mt-2{ margin-top:6px; }
-.note{ color:#93c5fd; font-size:14px; }
-
-.hero-img, .science-img{ width:100%; height:280px; object-fit:cover; border-radius:14px; display:block; }
-.img-card{ padding:12px; }
-
-.bubble{ background:#162235; border:1px solid #223247; border-radius:14px; padding:12px 14px; }
-
-.case{ border:1px dashed #40617a; border-radius:14px; padding:22px; text-align:center; color:#7aaec3; }
-
-.foot{ border-top:1px solid #112; margin-top:40px; padding:18px 0; color:#7aaec3; }
-
-@media (max-width: 960px){
-  .grid2{ grid-template-columns:1fr; }
-  .grid3{ grid-template-columns:1fr; }
-  .hero-img,.science-img{ height:220px; }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans','Liberation Sans','Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';}
+body{
+  color:var(--text);
+  background:
+    radial-gradient(1200px 600px at 20% -10%, #132033 0%, transparent 60%),
+    radial-gradient(1200px 600px at 120% 10%, #0c1a28 0%, transparent 60%),
+    var(--bg);
+  min-height:100vh;
 }
+a{color:var(--accent);text-decoration:none}
+a:hover{color:#74e7f0}
+
+/* ===== КОНТЕЙНЕРИ ===== */
+.wrap{max-width:1150px;margin:0 auto;padding:28px 18px}
+.card{
+  background:linear-gradient(180deg,var(--panel),var(--bg-2));
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:22px;
+}
+.grid{display:grid;gap:18px}
+.grid-2{grid-template-columns:1.3fr 1fr}
+.grid-2.equal{grid-template-columns:1fr 1fr}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:980px){
+  .grid-2,.grid-2.equal,.grid-3{grid-template-columns:1fr}
+}
+
+/* ===== ШАПКА ===== */
+.nav{
+  backdrop-filter:saturate(140%) blur(6px);
+  position:sticky;top:0;z-index:50;
+  background:rgba(8,12,20,.75);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.brand{font-weight:800;letter-spacing:.08em;color:#7ceef7}
+.menu{display:flex;gap:18px;flex-wrap:wrap}
+.menu a{color:var(--muted)}
+.menu a:hover{color:var(--text)}
+
+/* ===== ТИПОГРАФІЯ ===== */
+h1{font-size:34px;line-height:1.15;margin:0 0 8px}
+h2{font-size:22px;margin:0 0 12px}
+.lead{color:var(--muted);margin:0 0 10px}
+.badge{
+  display:inline-block;padding:6px 12px;border-radius:999px;
+  background:rgba(35,200,216,.12);color:#aef5fb;border:1px solid var(--ring);
+  font-size:14px
+}
+
+/* ===== КНОПКИ ===== */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 16px;border-radius:999px;font-weight:600;
+  border:1px solid var(--ring);color:#042a30;background:var(--accent);
+  box-shadow:0 8px 18px rgba(35,200,216,.25);cursor:pointer
+}
+.btn.secondary{background:transparent;color:var(--text)}
+.btn:hover{background:var(--accent-2)}
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ===== МАЛЮНКИ ===== */
+.hero-img,.fit{
+  width:100%;height:100%;object-fit:cover;border-radius:12px;
+  border:1px solid rgba(255,255,255,.07)
+}
+.thumb{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,.07)}
+
+/* ===== СЕКЦІЇ ===== */
+.section{margin-top:26px}
+.kicker{font-weight:800;letter-spacing:.03em;color:#ffe27a} /* лише в цитаті підсвітка */
+.note{color:var(--muted);font-size:14px;margin-top:8px}
+
+/* ===== ПРОДУКТ-СТОРІНКА ===== */
+.product-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px}
+@media (max-width:980px){.product-grid{grid-template-columns:1fr}}
+
+.price-pill{display:none;margin:0 8px 0 0}
+.show-price .price-pill{display:inline-flex}
 
 
 
