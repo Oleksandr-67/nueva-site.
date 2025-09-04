@@ -84,4 +84,41 @@ img{max-width:100%; display:block; border-radius:14px}
 @media (max-width: 900px){
   .hero .grid.two { grid-template-columns: 1fr; }
 }
+/* ===== NEW THEME ===== */
+:root{
+  --bg:#0b1220;         /* темно-графітовий фон */
+  --card:#111a2b;       /* плитки/карти */
+  --card-2:#0d1626;     /* другорядні плитки */
+  --text:#e6f2ff;       /* основний текст */
+  --muted:#9bb7d0;      /* підписи */
+  --accent:#06b6d4;     /* бірюзовий акцент */
+  --accent-2:#22d3ee;   /* світліший акцент */
+  --ring:#1484a8;       /* обводка */
+  --success:#34d399;    /* для «успіху» */
+}
+
+/* загальний фон/текст */
+body{ background:var(--bg); color:var(--text); }
+
+/* картки */
+.card{ background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:18px; }
+
+/* кнопки */
+.btn{ background:var(--accent); color:#00121f; border:none; }
+.btn:hover{ filter:brightness(1.08); }
+.btn.btn-ghost{ background:transparent; border:1px solid var(--accent); color:#cfeaff; }
+
+/* прибираємо «жовті бейджі» → робимо бірюзовими */
+.badge, .chip, .tag{ background:rgba(34,211,238,.12); border:1px solid var(--accent-2); color:#cfeaff; }
+
+/* картинка в герої/візуалах */
+.hero-figure, .grid.duo .card{ padding:0; overflow:hidden; }
+.hero-figure img, .grid.duo img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* ціна, що розкривається */
+.price-tag{
+  background:#0b2b36; border:1px solid var(--ring);
+  padding:8px 12px; border-radius:12px; font-weight:700; display:inline-block;
+}
+.price-tag small{ color:var(--muted); font-weight:400; }
 
