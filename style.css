@@ -61,4 +61,11 @@ img{max-width:100%; display:block; border-radius:14px}
   .hero, .twocol, .prod, .grid3, .links4, .ba{grid-template-columns:1fr}
   .h1{font-size:32px}
 }
+/* HERO IMAGE */
+.hero .hero-img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+}
 
