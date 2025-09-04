@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nueva Nitro — кисень та енергія</title>
-  <meta name="description" content="Nueva Nitro: H₂ + NO — підтримка кровообігу, насичення киснем, тонус і витривалість.">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nueva Nitro — більше кисню, більше енергії</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
 <header class="nav">
-  <div class="wrap navbar">
-    <a class="brand" href="index.html">NUEVA</a>
-    <nav class="menu">
+  <div class="wrap nav__inner">
+    <a class="logo" href="index.html">NUEVA</a>
+    <nav class="menu small">
       <a href="product-beauty.html">Beauty</a>
       <a href="product-body.html">Body</a>
       <a href="product-nitro.html" class="active">Nitro</a>
@@ -21,43 +21,41 @@
   </div>
 </header>
 
-<main class="wrap">
-  <section class="prod">
-    <div class="prod-text card pad">
-      <h1 class="h1">Nueva Nitro — більше кисню, більше енергії</h1>
-      <div class="price-box">
-  <button class="btn" onclick="revealPrice(this)" data-price="$213">Показати ціну</button>
-  <a class="btn btn-ghost" href="prices.html">Усі ціни</a>
-</div>
+<main class="wrap twocol">
+  <section class="card">
+    <h1>Nueva Nitro — кисень і кровообіг</h1>
 
-      <div class="cta-row">
-        <a class="btn" href="https://t.me/+ir3g8RhuXdRmYzAy" target="_blank">Консультація в Telegram</a>
-        <a class="btn ghost" href="tel:+380503709687">Подзвонити</a>
-      </div>
-
-      <h3>Як приймати</h3>
-      <ul class="list">
-        <li>Розчинити 1 саше у 350 мл негазованої води.</li>
-        <li>Легенько струсити, дати 5 хв для активації, випити натще.</li>
-        <li>Бажано ~30 хв до їжі/напоїв.</li>
-      </ul>
-
-      <h3>Що дає</h3>
-      <ul class="list">
-        <li>Підтримка кровообігу та насичення киснем.</li>
-        <li>Рівна енергія і витривалість.</li>
-        <li>Відчутні зміни вже приблизно за 45 хв.</li>
-      </ul>
-      <p class="note">Інформація має ознайомчий характер і не є медичною рекомендацією.</p>
+    <div class="price-actions">
+      <button class="btn" data-price="$56">Показати ціну</button>
+      <a class="btn" href="prices.html">Усі ціни</a>
+      <a class="btn btn-primary" href="https://t.me/+380503709687" target="_blank" rel="noopener">Консультація в Telegram</a>
     </div>
 
-    <div class="prod-media card pad">
-      <img src="nitro_sticks.jpg" alt="Nueva Nitro (оригінальна упаковка)">
-    </div>
+    <h3>Як приймати</h3>
+    <ul class="list">
+      <li>Розчинити 1 стик у 250–300 мл негазованої води.</li>
+      <li>Легенько струсити, дати ~5 хв для активації, випити натще.</li>
+      <li>Бажано ~30 хв до їжі/напоїв. Відчутні зміни — приблизно за 45 хв.</li>
+    </ul>
+
+    <h3>Що дає</h3>
+    <ul class="list">
+      <li>Підтримка кровообігу та насичення киснем.</li>
+      <li>Рівна енергія і витривалість без «провалів» від кави.</li>
+    </ul>
+
+    <p class="disclaimer">Інформація має ознайомчий характер і не є медичною рекомендацією.</p>
   </section>
+
+  <aside class="card product__img">
+    <img src="nitro_sticks.jpg" alt="Nueva Nitro" />
+  </aside>
 </main>
 
-<footer class="wrap footer">© NUEVA. Партнер: Олександр.</footer>
+<footer class="footer">
+  <div class="wrap">© NUEVA. Партнер: Олександр.</div>
+</footer>
 </body>
 </html>
+
 
